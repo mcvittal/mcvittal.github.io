@@ -37,6 +37,7 @@
         <script src="data/Forest_3.js"></script>
         <script src="data/Grassland_4.js"></script>
         <script>
+
         var highlightLayer;
         function highlightFeature(e) {
             highlightLayer = e.target;
@@ -53,7 +54,7 @@
             }
         }
         var map = L.map('map', {
-            zoomControl:true, maxZoom:28, minZoom:2
+            zoomControl:true, maxZoom:28, minZoom:1.5
         })
         var hash = new L.Hash(map);
         map.attributionControl.addAttribution('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a>');
@@ -74,28 +75,28 @@
             var audio = new Audio('http://alexmcvittie.me/mp3s/8.mp3');
             audio.play();
         }
-        function audio_water_play2(){
+        function audio_water_play2(feature, layer){
             var audio = new Audio('http://alexmcvittie.me/mp3s/9.mp3');
             audio.play();
         }
         function pop_WaterLocations_1(feature, layer) {
             layer.on({
-                mouseover: function(e) {
+                mouseout: function(e) {
                     for (i in e.target._eventParents) {
                         e.target._eventParents[i].resetStyle(e.target);
                     }
                 },
                 mouseover: highlightFeature,
-                click: audio_water_play1
+                click: audio_water_play2,
             });
             var popupContent = '<table>\
                     <tr>\
                         <th scope="row">Location</th>\
-                        <td>' + (feature.properties['Location'] !== null ? Autolinker.link(String(feature.properties['Location'])) : '') + '</td>\
+                        <td>' + (feature.properties['Location:'] !== null ? Autolinker.link(String(feature.properties['Location'])) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Play ID</th>\
-                        <td>' + (feature.properties['Play ID'] !== null ? Autolinker.link(String(feature.properties['Play ID'])) : '') + '</td>\
+                        <td>' + (feature.properties['Play ID:'] !== null ? Autolinker.link(String(feature.properties['Play ID'])) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
@@ -108,7 +109,7 @@
         rotationOrigin: 'center center',
         icon: L.icon({
             iconUrl: 'markers/placeholder.svg',
-            iconSize: [30.4, 30.4]
+            iconSize: [27.5, 27.5]
         }),
             }
         }
@@ -144,7 +145,7 @@
         
         function pop_Mountain_2(feature, layer) {
             layer.on({
-                mouseover: function(e) {
+                mouseout: function(e) {
                     for (i in e.target._eventParents) {
                         e.target._eventParents[i].resetStyle(e.target);
                     }
@@ -155,11 +156,11 @@
             var popupContent = '<table>\
                     <tr>\
                         <th scope="row">Location</th>\
-                        <td>' + (feature.properties['Location'] !== null ? Autolinker.link(String(feature.properties['Location'])) : '') + '</td>\
+                        <td>' + (feature.properties['Location:'] !== null ? Autolinker.link(String(feature.properties['Location'])) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Play ID</th>\
-                        <td>' + (feature.properties['Play ID'] !== null ? Autolinker.link(String(feature.properties['Play ID'])) : '') + '</td>\
+                        <td>' + (feature.properties['Play ID:'] !== null ? Autolinker.link(String(feature.properties['Play ID'])) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
@@ -172,7 +173,7 @@
         rotationOrigin: 'center center',
         icon: L.icon({
             iconUrl: 'markers/placeholder.svg',
-            iconSize: [30.4, 30.4]
+            iconSize: [27.5, 27.5]
         }),
             }
         }
@@ -204,25 +205,27 @@
         }
         function pop_Forest_3(feature, layer) {
             layer.on({
-                mouseover: function(e) {
+                mouseout: function(e) {
                     for (i in e.target._eventParents) {
                         e.target._eventParents[i].resetStyle(e.target);
                     }
                 },
                 mouseover: highlightFeature,
-                click: audio_forest_play2
+                click: audio_forest_play1
             });
             var popupContent = '<table>\
                     <tr>\
                         <th scope="row">Location</th>\
-                        <td>' + (feature.properties['Location'] !== null ? Autolinker.link(String(feature.properties['Location'])) : '') + '</td>\
+                        <td>' + (feature.properties['Location:'] !== null ? Autolinker.link(String(feature.properties['Location'])) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Play ID</th>\
-                        <td>' + (feature.properties['Play ID'] !== null ? Autolinker.link(String(feature.properties['Play ID'])) : '') + '</td>\
+                        <td>' + (feature.properties['Play ID:'] !== null ? Autolinker.link(String(feature.properties['Play ID'])) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
+
+    
         }
 
         function style_Forest_3_0() {
@@ -232,7 +235,7 @@
         rotationOrigin: 'center center',
         icon: L.icon({
             iconUrl: 'markers/placeholder.svg',
-            iconSize: [30.4, 30.4]
+            iconSize: [27.5, 27.5]
         }),
             }
         }
@@ -265,7 +268,7 @@
         }
         function pop_Grassland_4(feature, layer) {
             layer.on({
-                mouseover: function(e) {
+                mouseout: function(e) {
                     for (i in e.target._eventParents) {
                         e.target._eventParents[i].resetStyle(e.target);
                     }
@@ -276,11 +279,11 @@
             var popupContent = '<table>\
                     <tr>\
                         <th scope="row">Location</th>\
-                        <td>' + (feature.properties['Location'] !== null ? Autolinker.link(String(feature.properties['Location'])) : '') + '</td>\
+                        <td>' + (feature.properties['Location:'] !== null ? Autolinker.link(String(feature.properties['Location'])) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Play ID</th>\
-                        <td>' + (feature.properties['Play ID'] !== null ? Autolinker.link(String(feature.properties['Play ID'])) : '') + '</td>\
+                        <td>' + (feature.properties['Play ID:'] !== null ? Autolinker.link(String(feature.properties['Play ID'])) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
@@ -293,7 +296,7 @@
         rotationOrigin: 'center center',
         icon: L.icon({
             iconUrl: 'markers/placeholder.svg',
-            iconSize: [30.4, 30.4]
+            iconSize: [27.5, 27.5]
         }),
             }
         }
