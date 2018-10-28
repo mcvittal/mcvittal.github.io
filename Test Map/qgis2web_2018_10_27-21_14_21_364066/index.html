@@ -60,7 +60,7 @@
         map.addLayer(overlay_GoogleSatelliteHybrid_0);
         function pop_WaterLocations_1(feature, layer) {
             layer.on({
-                mouseout: function(e) {
+                mouseover: function(e) {
                     if (typeof layer.closePopup == 'function') {
                         layer.closePopup();
                     } else {
@@ -82,8 +82,9 @@
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
-
             
+
+
         }
 
         function style_WaterLocations_1_0() {
@@ -114,9 +115,13 @@
         });
         bounds_group.addLayer(layer_WaterLocations_1);
         map.addLayer(layer_WaterLocations_1);
+        function audio_mountain_play(){
+            var audio = new Audio('http://alexmcvittie.me/1.mp3?fbclid=IwAR0XOQficqPeQhddM5kpvVOhKWfSvGXu2fnUirgU5WlnYcoh-F7ztL9iNaY');
+            audio.play();
+        }
         function pop_Mountain_2(feature, layer) {
             layer.on({
-                mouseout: function(e) {
+                mouseover: function(e) {
                     if (typeof layer.closePopup == 'function') {
                         layer.closePopup();
                     } else {
@@ -126,7 +131,9 @@
                     }
                 },
                 mouseover: highlightFeature,
+                click: audio_mountain,
             });
+
             var popupContent = '<table>\
                     <tr>\
                         <th scope="row">Location:</th>\
@@ -137,7 +144,9 @@
                         <td>' + (feature.properties['Play ID'] !== null ? Autolinker.link(String(feature.properties['Play ID'])) : '') + '</td>\
                     </tr>\
                 </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
+            layer.bindPopup(popupContent, {maxHeight: 400})
+
+            
         }
 
         function style_Mountain_2_0() {
@@ -170,7 +179,7 @@
         map.addLayer(layer_Mountain_2);
         function pop_Forest_3(feature, layer) {
             layer.on({
-                mouseout: function(e) {
+                mouseover: function(e) {
                     if (typeof layer.closePopup == 'function') {
                         layer.closePopup();
                     } else {
@@ -192,6 +201,7 @@
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
+            
         }
 
         function style_Forest_3_0() {
@@ -224,7 +234,7 @@
         map.addLayer(layer_Forest_3);
         function pop_Grassland_4(feature, layer) {
             layer.on({
-                mouseout: function(e) {
+                mouseover: function(e) {
                     if (typeof layer.closePopup == 'function') {
                         layer.closePopup();
                     } else {
