@@ -40,7 +40,17 @@
         var highlightLayer;
         function highlightFeature(e) {
             highlightLayer = e.target;
-            highlightLayer.openPopup();
+
+            if (e.target.feature.geometry.type === 'LineString') {
+              highlightLayer.setStyle({
+                color: '#ffff00',
+              });
+            } else {
+              highlightLayer.setStyle({
+                fillColor: '#ffff00',
+                fillOpacity: 1
+              });
+            }
         }
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:2
@@ -54,49 +64,43 @@
                 map.fitBounds(bounds_group.getBounds());
             }
         }
-            if (bounds_group.getLayers().length) {
-                map.fitBounds(bounds_group.getBounds());
-            }
         var overlay_GoogleSatelliteHybrid_0 = L.tileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', {
             opacity: 1.0
         });
         overlay_GoogleSatelliteHybrid_0.addTo(map);
         map.addLayer(overlay_GoogleSatelliteHybrid_0);
-        function audio_water_play(){
+        
+        function audio_water_play1(){
             var audio = new Audio('http://alexmcvittie.me/mp3s/8.mp3');
             audio.play();
         }
-        function audio_water_play(){
+        function audio_water_play2(){
             var audio = new Audio('http://alexmcvittie.me/mp3s/9.mp3');
             audio.play();
         }
         function pop_WaterLocations_1(feature, layer) {
             layer.on({
                 mouseover: function(e) {
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
                     }
                 },
                 mouseover: highlightFeature,
-                click: audio_water_play,
+                click: audio_water_play1
             });
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Location:</th>\
+                        <th scope="row">Location</th>\
                         <td>' + (feature.properties['Location'] !== null ? Autolinker.link(String(feature.properties['Location'])) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Play ID:</th>\
+                        <th scope="row">Play ID</th>\
                         <td>' + (feature.properties['Play ID'] !== null ? Autolinker.link(String(feature.properties['Play ID'])) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
-            
         }
+
         function style_WaterLocations_1_0() {
             return {
                 pane: 'pane_WaterLocations_1',
@@ -104,7 +108,7 @@
         rotationOrigin: 'center center',
         icon: L.icon({
             iconUrl: 'markers/placeholder.svg',
-            iconSize: [27.5, 27.5]
+            iconSize: [30.4, 30.4]
         }),
             }
         }
@@ -125,48 +129,42 @@
         });
         bounds_group.addLayer(layer_WaterLocations_1);
         map.addLayer(layer_WaterLocations_1);
-        function audio_mountain_play1(){
-           
-            var audio = new Audio('http://alexmcvittie.me/mp3s/5.mp3');
+        function audio_mountain_play1(feature, layer){
+           var audio = new Audio('http://alexmcvittie.me/mp3s/5.mp3');
             audio.play();
-        }
-        function audio_monntain_play2(){
+        };
+        function audio_monntain_play2(feature, layer){
             var audio = new Audio('http://alexmcvittie.me/mp3s/6.mp3');
             audio.play();
-        }
+        };
         function audio_mountain_play3(){
             var audio = new Audio('http://alexmcvittie.me/mp3s/7.mp3');
             audio.play();
-        }
+        };
+        
         function pop_Mountain_2(feature, layer) {
             layer.on({
                 mouseover: function(e) {
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
                     }
                 },
                 mouseover: highlightFeature,
-                click: audio_mountain_play1,
-
-            
+                click: audio_mountain_play3
             });
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Location:</th>\
+                        <th scope="row">Location</th>\
                         <td>' + (feature.properties['Location'] !== null ? Autolinker.link(String(feature.properties['Location'])) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Play ID:</th>\
+                        <th scope="row">Play ID</th>\
                         <td>' + (feature.properties['Play ID'] !== null ? Autolinker.link(String(feature.properties['Play ID'])) : '') + '</td>\
                     </tr>\
                 </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400})
-            
+            layer.bindPopup(popupContent, {maxHeight: 400});
         }
+
         function style_Mountain_2_0() {
             return {
                 pane: 'pane_Mountain_2',
@@ -174,7 +172,7 @@
         rotationOrigin: 'center center',
         icon: L.icon({
             iconUrl: 'markers/placeholder.svg',
-            iconSize: [27.5, 27.5]
+            iconSize: [30.4, 30.4]
         }),
             }
         }
@@ -195,41 +193,38 @@
         });
         bounds_group.addLayer(layer_Mountain_2);
         map.addLayer(layer_Mountain_2);
-        function audio_forest_play(){
+        
+        function audio_forest_play1(){
             var audio = new Audio('http://alexmcvittie.me/mp3s/3.mp3');
             audio.play();
         }
-        function audio_forest_play(){
+        function audio_forest_play2(){
             var audio = new Audio('http://alexmcvittie.me/mp3s/4.mp3');
             audio.play();
         }
         function pop_Forest_3(feature, layer) {
             layer.on({
                 mouseover: function(e) {
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
                     }
                 },
                 mouseover: highlightFeature,
-                click: audio_forest_play,
+                click: audio_forest_play2
             });
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Location:</th>\
+                        <th scope="row">Location</th>\
                         <td>' + (feature.properties['Location'] !== null ? Autolinker.link(String(feature.properties['Location'])) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Play ID:</th>\
+                        <th scope="row">Play ID</th>\
                         <td>' + (feature.properties['Play ID'] !== null ? Autolinker.link(String(feature.properties['Play ID'])) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
-            
         }
+
         function style_Forest_3_0() {
             return {
                 pane: 'pane_Forest_3',
@@ -237,7 +232,7 @@
         rotationOrigin: 'center center',
         icon: L.icon({
             iconUrl: 'markers/placeholder.svg',
-            iconSize: [27.5, 27.5]
+            iconSize: [30.4, 30.4]
         }),
             }
         }
@@ -258,43 +253,39 @@
         });
         bounds_group.addLayer(layer_Forest_3);
         map.addLayer(layer_Forest_3);
-
-            
-        function audio_grass_play(feature){
+       
+       
+        function audio_grass_play1(feature){
             var audio = new Audio('http://alexmcvittie.me/mp3s/1.mp3');
                 audio.play();
         }
-        function audio_grass_play(feature){
+        function audio_grass_play2(feature){
         var audio = new Audio('http://alexmcvittie.me/mp3s/2.mp3');
                 audio.play();
         }
         function pop_Grassland_4(feature, layer) {
             layer.on({
                 mouseover: function(e) {
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
                     }
                 },
                 mouseover: highlightFeature,
-                click: audio_grass_play,
+                click: audio_grass_play1
             });
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Location:</th>\
+                        <th scope="row">Location</th>\
                         <td>' + (feature.properties['Location'] !== null ? Autolinker.link(String(feature.properties['Location'])) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Play ID:</th>\
+                        <th scope="row">Play ID</th>\
                         <td>' + (feature.properties['Play ID'] !== null ? Autolinker.link(String(feature.properties['Play ID'])) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
-
         }
+
         function style_Grassland_4_0() {
             return {
                 pane: 'pane_Grassland_4',
@@ -302,7 +293,7 @@
         rotationOrigin: 'center center',
         icon: L.icon({
             iconUrl: 'markers/placeholder.svg',
-            iconSize: [27.5, 27.5]
+            iconSize: [30.4, 30.4]
         }),
             }
         }
