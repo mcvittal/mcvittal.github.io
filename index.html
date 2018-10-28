@@ -119,6 +119,10 @@
             var audio = new Audio('http://alexmcvittie.me/1.mp3?fbclid=IwAR0XOQficqPeQhddM5kpvVOhKWfSvGXu2fnUirgU5WlnYcoh-F7ztL9iNaY');
             audio.play();
         }
+        function audio_mountain_pause(){
+            var audio_pause = new Audio ('http://alexmcvittie.me/1.mp3?fbclid=IwAR0XOQficqPeQhddM5kpvVOhKWfSvGXu2fnUirgU5WlnYcoh-F7ztL9iNaY');
+            audio_pause.pause();
+        }
         function pop_Mountain_2(feature, layer) {
             layer.on({
                 mouseover: function(e) {
@@ -131,7 +135,10 @@
                     }
                 },
                 mouseover: highlightFeature,
-                click: audio_mountain,
+                click: audio_mountain_play,
+                mouseout: audio_mountain_pause,
+            
+
             });
 
             var popupContent = '<table>\
