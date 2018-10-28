@@ -47,12 +47,16 @@
         })
         var hash = new L.Hash(map);
         map.attributionControl.addAttribution('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a>');
+        map.attributionControl.addAttribution('<a href=:"https://www.flaticon.com/free-icon/placeholder_149060#term=point&page=1&position=4" target="_"blank">Icons made by Smashicons from flaticons</a>');
         var bounds_group = new L.featureGroup([]);
         function setBounds() {
             if (bounds_group.getLayers().length) {
                 map.fitBounds(bounds_group.getBounds());
             }
         }
+            if (bounds_group.getLayers().length) {
+                map.fitBounds(bounds_group.getBounds());
+            }
         var overlay_GoogleSatelliteHybrid_0 = L.tileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', {
             opacity: 1.0
         });
@@ -258,9 +262,9 @@
             var audio = new Audio('http://alexmcvittie.me/mp3s/1.mp3');
                 audio.play();
         }
-            function audio_grass_play(feature){
-            var audio = new Audio('http://alexmcvittie.me/mp3s/2.mp3');
-                    audio.play();
+        function audio_grass_play(feature){
+        var audio = new Audio('http://alexmcvittie.me/mp3s/2.mp3');
+                audio.play();
         }
         function pop_Grassland_4(feature, layer) {
             layer.on({
