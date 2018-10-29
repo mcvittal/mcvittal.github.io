@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700,900');
+
+body {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.navbar {
+    box-shadow: 0px 1px 10px -1px rgba(0,0,0,0.4);
+    background: #ffffff;
+}
+
+a {
+    color: #015249 !important;
+}
+
+a:hover {
+    color: gainsboro !important;
+    text-decoration: none !important;
+}
+
+.navbar-nav > li > a:hover {
+    color: #ffffff !important;
+    background-color: #77C9D4 !important;
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 40px !important;
+    margin-top: 0px !important;
+}
+
+section {
+    padding: 50px 0px;
+}
+
+section.top {
+    margin-top: 60px;
+}
+
+section.primary {
+    background: #57BC90;
+    color: white;
+  }
+
+#logo {
+    text-align: center;
+}
+
+.logo-caption {
+    margin-top: 40px;
+    color: gray;
+}
+
+.about-product {
+    font-size: 18px;
+    text-align: center;
+}
+
+.about-product > p {
+    margin-bottom: 20px;
+}
+
+.about-member {
+    text-align: center;
+}
+
+.about-member > .col-xs-12 > img {
+    width: 200px;
+    height: 200px;
+    border: 1px solid gainsboro;
+}
+
+.video {
+    display: block;
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+    top: 0 !important;
+}
