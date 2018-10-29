@@ -111,7 +111,7 @@ function style_Water2_2_0() {
         rotationOrigin: 'center center',
         icon: L.icon({
             iconUrl: 'markers/placeholder.svg',
-            iconSize: [32.3, 32.3]
+            iconSize: [27.5, 27.5]
         }),
     }
 }
@@ -166,7 +166,7 @@ function style_Mountain1_3_0() {
         rotationOrigin: 'center center',
         icon: L.icon({
             iconUrl: 'markers/placeholder.svg',
-            iconSize: [28.5, 28.5]
+            iconSize: [27.5, 27.5]
         }),
     }
 }
@@ -221,7 +221,7 @@ function style_Mountain2_4_0() {
         rotationOrigin: 'center center',
         icon: L.icon({
             iconUrl: 'markers/placeholder.svg',
-            iconSize: [32.3, 32.3]
+            iconSize: [27.5, 27.5]
         }),
     }
 }
@@ -277,7 +277,7 @@ function style_Mountain3_5_0() {
         rotationOrigin: 'center center',
         icon: L.icon({
             iconUrl: 'markers/placeholder.svg',
-            iconSize: [32.3, 32.3]
+            iconSize: [27.5, 27.5]
         }),
     }
 }
@@ -332,7 +332,7 @@ function style_Forest1_6_0() {
         rotationOrigin: 'center center',
         icon: L.icon({
             iconUrl: 'markers/placeholder.svg',
-            iconSize: [32.3, 32.3]
+            iconSize: [27.5, 27.5]
         }),
     }
 }
@@ -387,7 +387,7 @@ function style_Forest2_7_0() {
         rotationOrigin: 'center center',
         icon: L.icon({
             iconUrl: 'markers/placeholder.svg',
-            iconSize: [32.3, 32.3]
+            iconSize: [27.5, 27.5]
         }),
     }
 }
@@ -442,7 +442,7 @@ function style_Grassland1_8_0() {
         rotationOrigin: 'center center',
         icon: L.icon({
             iconUrl: 'markers/placeholder.svg',
-            iconSize: [32.3, 32.3]
+            iconSize: [27.5, 27.5]
         }),
     }
 }
@@ -497,7 +497,7 @@ function style_Grassland2_9_0() {
         rotationOrigin: 'center center',
         icon: L.icon({
             iconUrl: 'markers/placeholder.svg',
-            iconSize: [32.3, 32.3]
+            iconSize: [27.5, 27.5]
         }),
     }
 }
