@@ -9,6 +9,10 @@ body {
     background: #ffffff;
 }
 
+.navbar-collapse, .dropdown-menu {
+    text-align: center !important;
+}
+
 a {
     color: #015249 !important;
 }
