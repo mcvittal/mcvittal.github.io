@@ -42,6 +42,9 @@ function pop_Water1_1(feature, layer) {
     /* Bahamas */
     var popupContent = '<table>\
                     <tr>\
+                        <td colspan="2" style="text-align: center;"><img style="width: 150px; height: 150px;" src="images/landsat/bahamas.png"></td>\
+                    </tr>\
+                    <tr>\
                         <th scope="row">Location: </th>\
                         <td style="white-space: nowrap;">' + (feature.properties['Location'] !== null ? Autolinker.link(String(feature.properties['Location'])) : '') + '</td>\
                     </tr>\
@@ -96,6 +99,9 @@ function pop_Water2_2(feature, layer) {
         click: audio_water_play2,
     });
     var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2" style="text-align: center;"><img style="width: 150px; height: 150px;" src="images/landsat/australia.png"></td>\
+                    </tr>\
                     <tr>\
                         <th scope="row">Location: </th>\
                         <td style="white-space: nowrap;">' + (feature.properties['Location'] !== null ? Autolinker.link(String(feature.properties['Location'])) : '') + '</td>\
@@ -152,6 +158,9 @@ function pop_Mountain1_3(feature, layer) {
     });
     var popupContent = '<table>\
                     <tr>\
+                        <td colspan="2" style="text-align: center;"><img style="width: 150px; height: 150px;" src="images/landsat/switzerland.png"></td>\
+                    </tr>\
+                    <tr>\
                         <th scope="row">Location: </th>\
                         <td style="white-space: nowrap;">' + (feature.properties['Location'] !== null ? Autolinker.link(String(feature.properties['Location'])) : '') + '</td>\
                     </tr>\
@@ -206,6 +215,9 @@ function pop_Mountain2_4(feature, layer) {
         click: audio_mountain_play2,
     });
     var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2" style="text-align: center;"><img style="width: 150px; height: 150px;" src="images/landsat/china.png"></td>\
+                    </tr>\
                     <tr>\
                         <th scope="row">Location: </th>\
                         <td style="white-space: nowrap;">' + (feature.properties['Location'] !== null ? Autolinker.link(String(feature.properties['Location'])) : '') + '</td>\
@@ -263,6 +275,9 @@ function pop_Mountain3_5(feature, layer) {
     });
     var popupContent = '<table>\
                     <tr>\
+                        <td colspan="2" style="text-align: center;"><img style="width: 150px; height: 150px;" src="images/landsat/peru.png"></td>\
+                    </tr>\
+                    <tr>\
                         <th scope="row">Location: </th>\
                         <td style="white-space: nowrap;">' + (feature.properties['Location'] !== null ? Autolinker.link(String(feature.properties['Location'])) : '') + '</td>\
                     </tr>\
@@ -317,6 +332,9 @@ function pop_Forest1_6(feature, layer) {
         click: audio_forest_play1,
     });
     var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2" style="text-align: center;"><img style="width: 150px; height: 150px;" src="images/landsat/russia.png"></td>\
+                    </tr>\
                     <tr>\
                         <th scope="row">Location: </th>\
                         <td style="white-space: nowrap;">' + (feature.properties['Location'] !== null ? Autolinker.link(String(feature.properties['Location'])) : '') + '</td>\
@@ -373,6 +391,9 @@ function pop_Forest2_7(feature, layer) {
     });
     var popupContent = '<table>\
                     <tr>\
+                        <td colspan="2" style="text-align: center;"><img style="width: 150px; height: 150px;" src="images/landsat/congo.png"></td>\
+                    </tr>\
+                    <tr>\
                         <th scope="row">Location: </th>\
                         <td style="white-space: nowrap;">' + (feature.properties['Location'] !== null ? Autolinker.link(String(feature.properties['Location'])) : '') + '</td>\
                     </tr>\
@@ -428,6 +449,9 @@ function pop_Grassland1_8(feature, layer) {
     });
     var popupContent = '<table>\
                     <tr>\
+                        <td colspan="2" style="text-align: center;"><img style="width: 150px; height: 150px;" src="images/landsat/saskatchewan.png"></td>\
+                    </tr>\
+                    <tr>\
                         <th scope="row">Location: </th>\
                         <td style="white-space: nowrap;">' + (feature.properties['Location'] !== null ? Autolinker.link(String(feature.properties['Location'])) : '') + '</td>\
                     </tr>\
@@ -482,6 +506,9 @@ function pop_Grassland2_9(feature, layer) {
         click: audio_grass_play2,
     });
     var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2" style="text-align: center;"><img style="width: 150px; height: 150px;" src="images/landsat/texas.png"></td>\
+                    </tr>\
                     <tr>\
                         <th scope="row">Location: </th>\
                         <td style="white-space: nowrap;">' + (feature.properties['Location'] !== null ? Autolinker.link(String(feature.properties['Location'])) : '') + '</td>\
