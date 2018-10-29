@@ -4,7 +4,7 @@ function highlightFeature(e) {
     highlightLayer.openPopup();
 }
 var map = L.map('map', {
-    zoomControl: true, maxZoom: 28, minZoom: 1
+    zoomControl: true, maxZoom: 28, minZoom: 2
 })
 var hash = new L.Hash(map);
 map.attributionControl.addAttribution('<a href="https://2018.spaceappschallenge.org/challenges/help-others-discover-earth/artify-earth/teams/salinity-1/project" target="_blank">Team Salinity</a>');
@@ -15,7 +15,6 @@ function setBounds() {
     if (bounds_group.getLayers().length) {
         map.fitBounds(bounds_group.getBounds());
     }
-    map.setMaxBounds(map.getBounds());
 }
 var overlay_GoogleSatelliteHybrid_0 = L.tileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', {
     opacity: 1.0
@@ -57,7 +56,7 @@ function style_Water1_1_0() {
         rotationOrigin: 'center center',
         icon: L.icon({
             iconUrl: 'markers/placeholder.svg',
-            iconSize: [27.5, 27.5]
+            iconSize: [30, 30]
         }),
     }
 }
@@ -112,7 +111,7 @@ function style_Water2_2_0() {
         rotationOrigin: 'center center',
         icon: L.icon({
             iconUrl: 'markers/placeholder.svg',
-            iconSize: [27.5, 27.5]
+            iconSize: [30, 30]
         }),
     }
 }
@@ -167,7 +166,7 @@ function style_Mountain1_3_0() {
         rotationOrigin: 'center center',
         icon: L.icon({
             iconUrl: 'markers/placeholder.svg',
-            iconSize: [27.5, 27.5]
+            iconSize: [30, 30]
         }),
     }
 }
@@ -222,7 +221,7 @@ function style_Mountain2_4_0() {
         rotationOrigin: 'center center',
         icon: L.icon({
             iconUrl: 'markers/placeholder.svg',
-            iconSize: [27.5, 27.5]
+            iconSize: [30, 30]
         }),
     }
 }
@@ -278,7 +277,7 @@ function style_Mountain3_5_0() {
         rotationOrigin: 'center center',
         icon: L.icon({
             iconUrl: 'markers/placeholder.svg',
-            iconSize: [27.5, 27.5]
+            iconSize: [30, 30]
         }),
     }
 }
@@ -333,7 +332,7 @@ function style_Forest1_6_0() {
         rotationOrigin: 'center center',
         icon: L.icon({
             iconUrl: 'markers/placeholder.svg',
-            iconSize: [27.5, 27.5]
+            iconSize: [30, 30]
         }),
     }
 }
@@ -388,7 +387,7 @@ function style_Forest2_7_0() {
         rotationOrigin: 'center center',
         icon: L.icon({
             iconUrl: 'markers/placeholder.svg',
-            iconSize: [27.5, 27.5]
+            iconSize: [30, 30]
         }),
     }
 }
@@ -443,7 +442,7 @@ function style_Grassland1_8_0() {
         rotationOrigin: 'center center',
         icon: L.icon({
             iconUrl: 'markers/placeholder.svg',
-            iconSize: [27.5, 27.5]
+            iconSize: [30, 30]
         }),
     }
 }
@@ -498,7 +497,7 @@ function style_Grassland2_9_0() {
         rotationOrigin: 'center center',
         icon: L.icon({
             iconUrl: 'markers/placeholder.svg',
-            iconSize: [27.5, 27.5]
+            iconSize: [30, 30]
         }),
     }
 }
