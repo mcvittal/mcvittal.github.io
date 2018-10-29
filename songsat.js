@@ -27,7 +27,7 @@ function audio_water_play1() {
 };
 function pop_Water1_1(feature, layer) {
     layer.on({
-        mouseout: function (e) {
+        mouseover: function (e) {
             if (typeof layer.closePopup == 'function') {
                 layer.closePopup();
             } else {
@@ -83,7 +83,7 @@ function audio_water_play2() {
 };
 function pop_Water2_2(feature, layer) {
     layer.on({
-        mouseout: function (e) {
+        mouseover: function (e) {
             if (typeof layer.closePopup == 'function') {
                 layer.closePopup();
             } else {
@@ -138,7 +138,7 @@ function audio_mountain_play1() {
 };
 function pop_Mountain1_3(feature, layer) {
     layer.on({
-        mouseout: function (e) {
+        mouseover: function (e) {
             if (typeof layer.closePopup == 'function') {
                 layer.closePopup();
             } else {
@@ -193,7 +193,7 @@ function audio_mountain_play2() {
 };
 function pop_Mountain2_4(feature, layer) {
     layer.on({
-        mouseout: function (e) {
+        mouseover: function (e) {
             if (typeof layer.closePopup == 'function') {
                 layer.closePopup();
             } else {
@@ -249,7 +249,7 @@ function audio_mountain_play3() {
 };
 function pop_Mountain3_5(feature, layer) {
     layer.on({
-        mouseout: function (e) {
+        mouseover: function (e) {
             if (typeof layer.closePopup == 'function') {
                 layer.closePopup();
             } else {
@@ -304,7 +304,7 @@ function audio_forest_play1() {
 };
 function pop_Forest1_6(feature, layer) {
     layer.on({
-        mouseout: function (e) {
+        mouseover: function (e) {
             if (typeof layer.closePopup == 'function') {
                 layer.closePopup();
             } else {
@@ -359,7 +359,7 @@ function audio_forest_play2() {
 };
 function pop_Forest2_7(feature, layer) {
     layer.on({
-        mouseout: function (e) {
+        mouseover: function (e) {
             if (typeof layer.closePopup == 'function') {
                 layer.closePopup();
             } else {
@@ -414,7 +414,7 @@ function audio_grass_play1() {
 };
 function pop_Grassland1_8(feature, layer) {
     layer.on({
-        mouseout: function (e) {
+        mouseover: function (e) {
             if (typeof layer.closePopup == 'function') {
                 layer.closePopup();
             } else {
@@ -469,7 +469,7 @@ function audio_grass_play2() {
 };
 function pop_Grassland2_9(feature, layer) {
     layer.on({
-        mouseout: function (e) {
+        mouseover: function (e) {
             if (typeof layer.closePopup == 'function') {
                 layer.closePopup();
             } else {
