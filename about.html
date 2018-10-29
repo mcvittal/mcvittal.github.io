@@ -1,56 +1,62 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <title>About Team Salinity</title>
     <link rel="icon" type="image/png" href="favicon.png" />
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="about.css">
-
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.compatibility.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <script src="scrolling.js"></script>
 </head>
 
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <a class="navbar-brand">SongSAT</a>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav">
-                    <li><a href="index.html">Home</a></li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown">About <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Our Logo</a></li>
-                            <li><a href="#songsat-info">SongSAT</a></li>
-                            <li><a href="#songsat-video">Product Video</a></li>
-                            <li><a href="#salinity">Team Salinity</a></li>
-                        </ul>
+    <nav class="navbar navbar-toggleable-md navbar-light fixed-top">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <h5 class="navbar-brand align-items-center" style="padding-bottom: 0; margin-bottom: .2rem;">
+            <img src="favicon.svg" width="25" height="25" class="d-inline-block align-top" alt="">
+            SongSAT</h5>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#main">Our Logo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#songsat-video">Product Video</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#salinity">Team Salinity</a>
+                </li>
+            </ul>
+            <span class="navbar-text">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/mcvittal/songsat"><i class="fab fa-github"></i>
+                            Github</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://2018.spaceappschallenge.org/challenges/help-others-discover-earth/artify-earth/teams/salinity-1/project"
+                            target="_blank"><i class="fas fa-space-shuttle"></i> SpaceApps</a>
                     </li>
                 </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="https://github.com/mcvittal/songsat" target="_blank"><i class="fab fa-github"></i>
-                            Github</a></li>
-                    <li><a href="https://2018.spaceappschallenge.org/challenges/help-others-discover-earth/artify-earth/teams/salinity-1/project"
-                            target="_blank"><i class="fas fa-space-shuttle"></i> SpaceApps</a></li>
-                </ul>
-            </div>
+            </span>
         </div>
     </nav>
     <!-- /end of Navigation -->
-    <section id="logo" class="top">
+    <section id="main"></section>
+    <section id="logo">
         <h1>Our Logo</h1>
         <img src="logo-black.png">
         <p class="logo-caption">Our logo is a satellite made from a rotated fermata and a half rest.</p>
@@ -88,100 +94,141 @@
 
     <section id="songsat-video">
         <div class="container">
-            <h1 style="margin-bottom: 0 !important;">Product Video</h1>
-            <iframe class="video" src="https://player.vimeo.com/video/297604867" frameborder="0" webkitallowfullscreen
-                mozallowfullscreen allowfullscreen></iframe>
+            <h1>Product Video</h1>
+            <div class='embed-container'><iframe src="https://player.vimeo.com/video/297604867" frameborder="0"
+                    webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
         </div>
     </section>
     <section id="salinity" class="primary">
-        <div class="container">
+        <div class="container-fluid">
             <h1>Team Salinity</h1>
             <div class="row">
-                <div class="col-xs-3 about-member">
-                    <div class="col-xs-12">
-                        <img class="img-circle" src="profiles/alex-mcvittie.jpg">
-                    </div>
-                    <div class="col-xs-12">
-                        <h3>Alex McVittie</h3>
-                    </div>
-                    <div class="col-xs-12">
-                        <p>
-                            Graduated from the University of Waterloo's Faculty of Environment
-                            specializing in Geomatics. He now works full-time at SkyWatch Space Applications Inc. as a
-                            Platform Developer on the Image Processing Engineering team,
-                            designing cutting-edge remote sensing algorithms. In his spare time, he enjoys bicycle
-                            touring and writing music.
-                        </p>
-                    </div>
-                    <div class="col-xs-12">
-                        Personal portfolio: <a href="http://alexmcvittie.me" target="_blank">http://alexmcvittie.me</a>
-                    </div>
-
-                </div>
-                <div class="col-xs-3 about-member">
-                    <div class="col-xs-12">
-                        <img class="img-circle" src="profiles/colin-tm.jpg">
-                    </div>
-                    <div class="col-xs-12">
-                        <h3>Colin TM</h3>
-                    </div>
-                    <div class="col-xs-12">
-                        <p>
-                            Expected to graduate from the University of Waterloo in April 2019. He is currently
-                            studying Geomatics major, with a minor in Computer Science. He has gained technical skills
-                            through working at the University of Waterloo (Mapping, Analysis, and Design), York Region
-                            Planning department, and City of Toronto.
-                            He enjoys cooking and challenging himself in his free time.
-                        </p>
-                    </div>
-                    <div class="col-xs-12">
-                        <a href="https://www.linkedin.com/in/colin-tuen-muk-46b501146/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+                <div class="col-12 col-lg-3">
+                    <div class="row">
+                        <div class="col-12 col-sm-3 col-lg-12 d-flex align-items-center justify-content-center">
+                            <img class="rounded-circle img-fluid mx-auto img-about-member" src="profiles/alex-mcvittie.jpg">
+                        </div>
+                        <div class="col-12 col-sm-9 col-lg-12 about-member">
+                            <div class="col-12">
+                                <h3>Alex McVittie</h3>
+                            </div>
+                            <div class="col-12">
+                                <p>
+                                    Graduated from the University of Waterloo's Faculty of Environment
+                                    specializing in Geomatics. He now works full-time at SkyWatch Space Applications
+                                    Inc.
+                                    as a
+                                    Platform Developer on the Image Processing Engineering team,
+                                    designing cutting-edge remote sensing algorithms. In his spare time, he enjoys
+                                    bicycle
+                                    touring and writing music.
+                                </p>
+                            </div>
+                            <div class="col-12">
+                                Personal portfolio: <a href="http://alexmcvittie.me" target="_blank">http://alexmcvittie.me</a>
+                            </div>
+                        </div>
+                        <div class="col-12 divider">
+                            <hr>
+                        </div>
                     </div>
                 </div>
-                <div class="col-xs-3 about-member">
-                    <div class="col-xs-12">
-                        <img class="img-circle" src="profiles/corina-kwong.jpg">
-                    </div>
-                    <div class="col-xs-12">
-                        <h3>Corina Kwong</h3>
-                    </div>
-                    <div class="col-xs-12">
-                        <p>
-                            Expected to graduate from the University of Waterloo in April 2019. She is currently
-                            studying Geomatics major, with a minor in Computer Science. During her studies, she has
-                            gained
-                            developer experience from working at CIBC, York Region, CGI, and Scotiabank. She hopes to
-                            pursuit a career in front-end development.
-                        </p>
-                    </div>
-                    <div class="col-xs-12">
-                        <a href="https://www.linkedin.com/in/corinakwong/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+                <div class="col-12 col-lg-3">
+                    <div class="row">
+                        <div class="col-12 col-sm-3 col-lg-12 d-flex align-items-center justify-content-center">
+                            <img class="rounded-circle img-fluid mx-auto img-about-member" src="profiles/colin-tm.jpg">
+                        </div>
+                        <div class="col-12 col-sm-9 col-lg-12 about-member">
+                            <div class="col-12">
+                                <h3>Colin TM</h3>
+                            </div>
+                            <div class="col-12">
+                                <p>
+                                    Expected to graduate from the University of Waterloo in April 2019. He is currently
+                                    studying Geomatics major, with a minor in Computer Science. He has gained technical
+                                    skills
+                                    through working at the University of Waterloo (Mapping, Analysis, and Design), York
+                                    Region
+                                    Planning department, and City of Toronto.
+                                    He enjoys cooking and challenging himself in his free time.
+                                </p>
+                            </div>
+                            <div class="col-12">
+                                <a href="https://www.linkedin.com/in/colin-tuen-muk-46b501146/" target="_blank"><i
+                                        class="fab fa-linkedin fa-2x"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-12 divider">
+                            <hr>
+                        </div>
                     </div>
                 </div>
-                <div class="col-xs-3 about-member">
-                    <div class="col-xs-12">
-                        <img class="img-circle" src="profiles/janet-hu.jpg">
+                <div class="col-12 col-lg-3">
+                    <div class="row">
+                        <div class="col-12 col-sm-3 col-lg-12 d-flex align-items-center justify-content-center">
+                            <img class="rounded-circle img-fluid mx-auto img-about-member" src="profiles/corina-kwong.jpg">
+                        </div>
+                        <div class="col-12 col-sm-9 col-lg-12 about-member">
+                            <div class="col-12">
+                                <h3>Corina Kwong</h3>
+                            </div>
+                            <div class="col-12">
+                                <p>
+                                    Expected to graduate from the University of Waterloo in April 2019. She is
+                                    currently
+                                    studying Geomatics major, with a minor in Computer Science. During her studies, she
+                                    has
+                                    gained
+                                    developer experience from working at CIBC, York Region, CGI, and Scotiabank. She
+                                    hopes
+                                    to
+                                    pursuit a career in front-end development.
+                                </p>
+                            </div>
+                            <div class="col-12">
+                                <a href="https://www.linkedin.com/in/corinakwong/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-12 divider">
+                            <hr>
+                        </div>
                     </div>
-                    <div class="col-xs-12">
-                        <h3>Janet Hu</h3>
-                    </div>
-                    <div class="col-xs-12">
-                        <p>
-                            Graduated with a Bachelor of Environmental Studies from the University of
-                            Waterloo.
-                            she has gained experience in the GIS field working for York Region, City of Toronto
-                            and
-                            Environment Canada. She is currently doing her masters in Physical Geography at the
-                            University of Waterloo.
-                        </p>
-                    </div>
-                    <div class="col-xs-12">
-                        <a href="https://www.linkedin.com/in/janet-hu-a1a11279" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <div class="row">
+                        <div class="col-12 col-sm-3 col-lg-12 d-flex align-items-center justify-content-center">
+                            <img class="rounded-circle img-fluid mx-auto img-about-member" src="profiles/janet-hu.jpg">
+                        </div>
+                        <div class="col-12 col-sm-9 col-lg-12 about-member">
+                            <div class="col-12">
+                                <h3>Janet Hu</h3>
+                            </div>
+                            <div class="col-12">
+                                <p>
+                                    Graduated with a Bachelor of Environmental Studies from the University of
+                                    Waterloo.
+                                    she has gained experience in the GIS field working for York Region, City of Toronto
+                                    and
+                                    Environment Canada. She is currently doing her masters in Physical Geography at the
+                                    University of Waterloo.
+                                </p>
+                            </div>
+                            <div class="col-12">
+                                <a href="https://www.linkedin.com/in/janet-hu-a1a11279" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="scrolling.js"></script>
 </body>
 
 </html>
