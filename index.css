@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700,900');
+
+body {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.navbar {
+    box-shadow: 0px 1px 10px -1px rgba(0,0,0,0.4);
+    background: #ffffff;
+}
+
+a {
+    color: #015249 !important;
+}
+
+a:hover {
+    color: gainsboro !important;
+    text-decoration: none !important;
+}
+
+.navbar-nav > li > a:hover {
+    color: #ffffff !important;
+    background-color: #77C9D4 !important;
+    border-radius: 5px;
+}
+
+h3 {
+    text-align: center;
+    margin: 25px 0px !important;
+}

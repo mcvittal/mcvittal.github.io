@@ -44,6 +44,14 @@ section.primary {
     color: white;
   }
 
+#songsat-info {
+    text-align: center;
+}
+
+#songsat-info > .container > h3 {
+    margin-bottom: 40px;
+}
+
 #logo {
     text-align: center;
 }
@@ -55,7 +63,6 @@ section.primary {
 
 .about-product {
     font-size: 18px;
-    text-align: center;
 }
 
 .about-product > p {

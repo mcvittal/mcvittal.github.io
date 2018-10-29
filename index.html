@@ -1,46 +1,94 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
-        <meta name="mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <link rel="stylesheet" href="css/leaflet.css">
-        <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
-        <link rel="stylesheet" href="css/leaflet-control-geocoder.Geocoder.css">
-        <style>
-        html, body, #map {
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="css/leaflet.css">
+    <link rel="stylesheet" href="css/qgis2web.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/leaflet-control-geocoder.Geocoder.css">
+
+    <title>SongSAT Team Salinity</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="index.css">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.compatibility.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="scrolling.js"></script>
+    <style>
+        html,
+        body,
+        #map {
             width: 100%;
             height: 100%;
             padding: 0;
             margin: 0;
         }
-        </style>
-        <title></title>
-    </head>
-    <body>
-        <div id="map">
+    </style>
+    <title></title>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#MyNavbar">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="#">SongSAT</a>
+            </div>
+            <div class="collapse navbar-collapse" id="MyNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#songsat-info">About SongSAT</a></li>
+                    <li><a href="#songsat-video">Product Video</a></li>
+                    <li><a href="#salinity">Team Salinity</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="https://github.com/mcvittal/songsat" target="_blank"><i class="fab fa-github"></i>
+                            Github</a></li>
+                    <li><a href="https://2018.spaceappschallenge.org/challenges/help-others-discover-earth/artify-earth/teams/salinity-1/project"
+                            target="_blank"><i class="fas fa-space-shuttle"></i> SpaceApps</a></li>
+                </ul>
+            </div>
         </div>
-        <script src="js/qgis2web_expressions.js"></script>
-        <script src="js/leaflet.js"></script>
-        <script src="js/leaflet.rotatedMarker.js"></script>
-        <script src="js/leaflet.pattern.js"></script>
-        <script src="js/leaflet-hash.js"></script>
-        <script src="js/Autolinker.min.js"></script>
-        <script src="js/rbush.min.js"></script>
-        <script src="js/labelgun.min.js"></script>
-        <script src="js/labels.js"></script>
-        <script src="js/leaflet-control-geocoder.Geocoder.js"></script>
-        <script src="data/Water1_1.js"></script>
-        <script src="data/Water2_2.js"></script>
-        <script src="data/Mountain1_3.js"></script>
-        <script src="data/Mountain2_4.js"></script>
-        <script src="data/Mountain3_5.js"></script>
-        <script src="data/Forest1_6.js"></script>
-        <script src="data/Forest2_7.js"></script>
-        <script src="data/Grassland1_8.js"></script>
-        <script src="data/Grassland2_9.js"></script>
-        <script src="songsat.js"></script>
-    </body>
+    </nav>
+    <!-- /end of Navigation -->
+    <h3>Click on any of the location markers to hear a sample SongSAT output!</h3>
+    <div id="map">
+    </div>
+    <script src="js/qgis2web_expressions.js"></script>
+    <script src="js/leaflet.js"></script>
+    <script src="js/leaflet.rotatedMarker.js"></script>
+    <script src="js/leaflet.pattern.js"></script>
+    <script src="js/leaflet-hash.js"></script>
+    <script src="js/Autolinker.min.js"></script>
+    <script src="js/rbush.min.js"></script>
+    <script src="js/labelgun.min.js"></script>
+    <script src="js/labels.js"></script>
+    <script src="js/leaflet-control-geocoder.Geocoder.js"></script>
+    <script src="data/Water1_1.js"></script>
+    <script src="data/Water2_2.js"></script>
+    <script src="data/Mountain1_3.js"></script>
+    <script src="data/Mountain2_4.js"></script>
+    <script src="data/Mountain3_5.js"></script>
+    <script src="data/Forest1_6.js"></script>
+    <script src="data/Forest2_7.js"></script>
+    <script src="data/Grassland1_8.js"></script>
+    <script src="data/Grassland2_9.js"></script>
+    <script src="songsat.js"></script>
+</body>
+
 </html>
