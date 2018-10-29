@@ -4,6 +4,10 @@ body {
     font-family: 'Roboto', sans-serif !important;
 }
 
+.top {
+    margin-top: 95.9px !important;
+}
+
 .navbar {
     box-shadow: 0px 1px 10px -1px rgba(0,0,0,0.4);
     background: #ffffff;
@@ -11,6 +15,10 @@ body {
 
 .navbar-collapse, .dropdown-menu {
     text-align: center !important;
+}
+
+.navbar-toggler {
+    outline: none !important;
 }
 
 a {
@@ -26,9 +34,11 @@ a:hover {
     color: #ffffff !important;
     background-color: #77C9D4 !important;
     border-radius: 5px;
+    padding: 8px;
 }
 
 h3 {
     text-align: center;
     margin: 25px 0px !important;
+    font-weight: 500;
 }

@@ -9,6 +9,14 @@ body {
     background: #ffffff;
 }
 
+.navbar-collapse, .dropdown-menu {
+    text-align: center !important;
+}
+
+.navbar-toggler {
+    outline: none !important;
+}
+
 a {
     color: #015249 !important;
 }
@@ -22,6 +30,7 @@ a:hover {
     color: #ffffff !important;
     background-color: #77C9D4 !important;
     border-radius: 5px;
+    padding: 8px;
 }
 
 h1 {
