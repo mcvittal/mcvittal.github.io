@@ -4,7 +4,7 @@ function highlightFeature(e) {
     highlightLayer.openPopup();
 }
 var map = L.map('map', {
-    zoomControl: true, maxZoom: 28, minZoom: 2
+    zoomControl: true, maxZoom: 28, minZoom: 1.5
 })
 var hash = new L.Hash(map);
 map.attributionControl.addAttribution('<a href="https://2018.spaceappschallenge.org/challenges/help-others-discover-earth/artify-earth/teams/salinity-1/project" target="_blank">Team Salinity</a>');
