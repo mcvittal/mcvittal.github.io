@@ -87,9 +87,16 @@
                     forest,
                     coastal/water areas, and mountainous areas) into songs with distinct, recognizable musical patterns
                     that
-                    play back using MIDI. We took the MIDI files outputted and brought them into MuseScore, where we
-                    used
-                    different instruments and virtual instrument plugins to further enhance the auditory experience.
+                    play back using MIDI. SongSAT uses the geographical location of the image and compares coordinates 
+                    within the image to the GLCF dataset, a global land use dataset generated from NASA's MODIS satellite 
+                    data. It is also compared to a second layer, a global mountain range dataset provided by the United 
+                    Nations. The most commonly occuring landcover type from the sampling is selected, and then the image data,
+                    along with the predominant land cover class, is then passed into the SongSAT algorithm. SongSAT turns the 
+                    data into music by quantizing the 0-255 data range in LandSAT pixels to a smaller range, which then becomes
+                    the degrees of a scale. For each landscape, a different, appropriate scale is applied. From there, each bar 
+                    is generated using a selection of pre-defined rhythms, and SongSAT simply creates the order of notes. In order
+                    to properly capture the feeling in each landscape, we took the MIDI files outputted and brought them into
+                    MuseScore, where we used different instruments and virtual instrument plugins to further enhance the auditory experience.
                 </p>
                 <p>
                     We're proud to announce that this algorithm is 100% open source, and you can view the code at:
