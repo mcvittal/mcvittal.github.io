@@ -87,25 +87,57 @@
                     forest,
                     coastal/water areas, and mountainous areas) into songs with distinct, recognizable musical patterns
                     that
-                    play back using MIDI. 
-                    
+                    play back using MIDI.
+
                 </p>
                 <p>
                     <b>How it works:</b><br><br>
 
-The first thing SongSAT does is determine what the predominant land class the image is. To do this, we sample 400 points on the input image and extract the land class at these sample locations from the <a href="http://glcf.umd.edu/data/lc/">Global Land Cover Facility MODIS dataset</a>. We also compare to see if any points fall in any mountainous regions, using <a href="https://www.unep-wcmc.org/resources-and-data/mountains-and-forests-in-mountains"> a dataset provided by the United Nations</a>, since the MODIS dataset does not have mountains as a land cover classification. If the majority of the points fall within mountainous pixels, it returns mountainous as the land cover classification, otherwise it will return the dominant land cover class fount from the MODIS dataset. <br><br>
+                    The first thing SongSAT does is determine what the predominant land class the image is. To do this,
+                    we sample 400 points on the input image and extract the land class at these sample locations from
+                    the <a href="http://glcf.umd.edu/data/lc/">Global Land Cover Facility MODIS dataset</a>. We also
+                    compare to see if any points fall in any mountainous regions, using <a href="https://www.unep-wcmc.org/resources-and-data/mountains-and-forests-in-mountains">
+                        a dataset provided by the United Nations</a>, since the MODIS dataset does not have mountains
+                    as a land cover classification. If the majority of the points fall within mountainous pixels, it
+                    returns mountainous as the land cover classification, otherwise it will return the dominant land
+                    cover class fount from the MODIS dataset. <br><br>
 
-In order to have music that represents the landscape, a bit of human intervention was needed to guide the algorithm in the right direction. Due to time constraints, we were only able to create themes for four dominant land cover classes (Forest, water, mountain, and grassland), but given more time, we would be able to create themes that are representative of the remaining land cover classes (arctic, desert, and urban). <br><br>
+                    In order to have music that represents the landscape, a bit of human intervention was needed to
+                    guide the algorithm in the right direction. Due to time constraints, we were only able to create
+                    themes for four dominant land cover classes (Forest, water, mountain, and grassland), but given
+                    more time, we would be able to create themes that are representative of the remaining land cover
+                    classes (arctic, desert, and urban). <br><br>
 
-Each theme has a corresponding set of notes that it can play (The water theme uses a pentatonic scale, the mountain theme uses a combination of semitone clusters and a variation on the minor scale, and the other two use variations on the major scale), and each theme also has a set of rhythms for the two voices in the melody to use that are selected at random. SongSAT takes the modulus of each pixel value to simplify the 0-255 range of the pixel down to the number of notes in the selected scale, and then maps the new value, which is the degree of the scale, to the corresponding note in that scale. To make a pleasing accompaniment, the first note of the bar selected in the melody is made the note for the accompaniment for that bar, with the accompaniment switching octaves on each note change to add movement and variation to it. Forest however uses a sixteenth note arpeggiating baseline and mountain uses an aggressive syncopated rhythm instead of a simple octave switching to better match the mood of the area. All these values are written to a MIDI file as output. As well, to keep the melody line flowing and not disjointed, it ensures that no jumps larger than a perfect fifth occur (For example, if the interval is from C to A, it will choose to go down a major third instead of up a major sixth). <br><br>
+                    Each theme has a corresponding set of notes that it can play (The water theme uses a pentatonic
+                    scale, the mountain theme uses a combination of semitone clusters and a variation on the minor
+                    scale, and the other two use variations on the major scale), and each theme also has a set of
+                    rhythms for the two voices in the melody to use that are selected at random. SongSAT takes the
+                    modulus of each pixel value to simplify the 0-255 range of the pixel down to the number of notes in
+                    the selected scale, and then maps the new value, which is the degree of the scale, to the
+                    corresponding note in that scale. To make a pleasing accompaniment, the first note of the bar
+                    selected in the melody is made the note for the accompaniment for that bar, with the accompaniment
+                    switching octaves on each note change to add movement and variation to it. Forest however uses a
+                    sixteenth note arpeggiating baseline and mountain uses an aggressive syncopated rhythm instead of a
+                    simple octave switching to better match the mood of the area. All these values are written to a
+                    MIDI file as output. As well, to keep the melody line flowing and not disjointed, it ensures that
+                    no jumps larger than a perfect fifth occur (For example, if the interval is from C to A, it will
+                    choose to go down a major third instead of up a major sixth). <br><br>
 
-The MIDI file at the end was then brought into MuseScore, a free and open source notation software to select more appropriate instruments that fit the mood of the piece. The forest theme uses the default harp sound that ships with MuseScore, while the rest were instruments chosen from a third-party soundfont file to make the songs sound better and slightly less artificial.<br><br>
+                    The MIDI file at the end was then brought into MuseScore, a free and open source notation software
+                    to select more appropriate instruments that fit the mood of the piece. The forest theme uses the
+                    default harp sound that ships with MuseScore, while the rest were instruments chosen from a
+                    third-party soundfont file to make the songs sound better and slightly less artificial.<br><br>
 
                     <b>Where it will go next:</b><br><br>
 
-If our team chooses to pursue improving SongSAT, the next thing to do would be to add the remaining land classification themes to allow for global coverage of SongSAT, and to add more rhythm options to the songs to make it feel a bit less monotonous and repetitive, and possibly add in multiple sections to the songs generated. After these key parts to it are improved, the next step after that would be to make the program more user-friendly and accessible so that anyone can install and run it, or make it into a proper web application that generates the music on the fly.
+                    If our team chooses to pursue improving SongSAT, the next thing to do would be to add the remaining
+                    land classification themes to allow for global coverage of SongSAT, and to add more rhythm options
+                    to the songs to make it feel a bit less monotonous and repetitive, and possibly add in multiple
+                    sections to the songs generated. After these key parts to it are improved, the next step after that
+                    would be to make the program more user-friendly and accessible so that anyone can install and run
+                    it, or make it into a proper web application that generates the music on the fly.
                 </p>
-                
+
                 <p>
                     We're proud to announce that this algorithm is 100% open source, and you can view the code at:
                     <a href="http://github.com/mcvittal/SongSAT" target="_blank">http://github.com/mcvittal/SongSAT</a>
@@ -134,8 +166,8 @@ If our team chooses to pursue improving SongSAT, the next thing to do would be t
                     </p>
                     <br>
                 </div>
-            </div><div class="row">
-                
+            </div>
+            <div class="row">
                 <div class="col-12 col-lg-3">
                     <div class="row">
                         <div class="col-12 col-sm-3 col-lg-12 d-flex align-items-center justify-content-center">
@@ -177,11 +209,13 @@ If our team chooses to pursue improving SongSAT, the next thing to do would be t
                             </div>
                             <div class="col-12">
                                 <p>
-                                    Expected to graduate from the University of Waterloo in August 2019. He is currently
+                                    Expected to graduate from the University of Waterloo in August 2019. He is
+                                    currently
                                     studying Geomatics as a major, with a minor in Computer Science. He has gained
                                     technical
                                     skills
-                                    through working at the University of Waterloo (Mapping, Analysis, and Design Lab), York
+                                    through working at the University of Waterloo (Mapping, Analysis, and Design Lab),
+                                    York
                                     Region
                                     Planning department, and City of Toronto.
                                     He enjoys cooking and challenging himself in his free time.
@@ -249,6 +283,12 @@ If our team chooses to pursue improving SongSAT, the next thing to do would be t
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="container" style="text-align: center;">
+                    <br><br><br>
+                    <h3 style="font-weight: 400;"><i>"We're salty so you don't have to be."</i></h3>
                 </div>
             </div>
         </div>
