@@ -9,6 +9,17 @@
     background: transparent !important;
 }
 
+.leaflet-popup-content {
+    text-align: center;
+}
+
+.img-points {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+    margin-top: 4px;
+}
+
 body {
     font-family: 'Roboto', sans-serif !important;
 }

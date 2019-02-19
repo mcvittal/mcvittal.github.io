@@ -7,7 +7,7 @@ function playAudio(src) {
 }
 
 function popUp(feature, layer) {
-    layer.bindPopup("<b>Location:</b> " + feature.properties.name + "<br><b>Classification:</b> " + feature.properties.classification);
+    layer.bindPopup('<img class="img-points" src="images/landsat/' + feature.properties.imgname + '"><br><b>Location:</b> ' + feature.properties.name + "<br><b>Classification:</b> " + feature.properties.classification);
 }
 
 var points = new L.GeoJSON.AJAX("data/points.geojson", { onEachFeature: popUp });
