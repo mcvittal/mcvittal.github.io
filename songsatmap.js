@@ -16,7 +16,7 @@ points.on('click', function (e) { playAudio(e.layer.feature.properties.audiolink
 
 var colourmap = L.tileLayer('http://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '<a href="http://openstreetmap.org/" target="_blank">OpenStreetMap</a>, <a href="https://github.com/calvinmetcalf/leaflet-ajax" target="_blank">Leaflet Ajax</a>',
-    maxZoom: 14, minZoom: 2
+    noWrap: true, maxZoom: 5, minZoom: 2
 });
 
 var baseMaps = {
@@ -26,7 +26,9 @@ var baseMaps = {
 var songsatmap = L.map('map', {
     center: [44.0, 0],
     zoom: 2,
+    maxBounds: L.latLngBounds([-56,-180], [84,180]),
+    maxBoundsViscosity: 0.75,
     layers: [colourmap, points]
 });
 
-L.control.layers(baseMaps).addTo(map);
+//L.control.layers(baseMaps).addTo(map);
