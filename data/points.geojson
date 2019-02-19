@@ -1,0 +1,149 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.251607781051604,
+          57.586018165013165
+        ]
+      },
+      "properties": {
+        "name": "Russia",
+        "classification": "Forest",
+        "audiolink": "http://alexmcvittie.me/mp3s/3.mp3"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.580398007140193,
+          -3.893397195957253
+        ]
+      },
+      "properties": {
+        "name": "Democratic Republic of the Congo",
+        "classification": "Forest",
+        "audiolink": "http://alexmcvittie.me/mp3s/4.mp3"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -105.301803846888575,
+          51.72450507845366
+        ]
+      },
+      "properties": {
+        "name": "Saskatchewan, Canada",
+        "classification": "Grassland",
+        "audiolink": "http://alexmcvittie.me/mp3s/2.mp3"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.569797945457438,
+          31.518586834658226
+        ]
+      },
+      "properties": {
+        "name": "Texas, United States of America",
+        "classification": "Grassland",
+        "audiolink": "http://alexmcvittie.me/mp3s/1.mp3"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.046500864328063,
+          46.513569817614147
+        ]
+      },
+      "properties": {
+        "name": "Switzerland",
+        "classification": "Mountainous",
+        "audiolink": "http://alexmcvittie.me/mp3s/7.mp3"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 6,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.738511249240503,
+          29.826304929316635
+        ]
+      },
+      "properties": {
+        "name": "China",
+        "classification": "Mountainous",
+        "audiolink": "http://alexmcvittie.me/mp3s/6.mp3"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 7,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.840416016718294,
+          -18.874842868171999
+        ]
+      },
+      "properties": {
+        "name": "Peru",
+        "classification": "Mountainous",
+        "audiolink": "http://alexmcvittie.me/mp3s/5.mp3"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.895593282076632,
+          24.31621190632541
+        ]
+      },
+      "properties": {
+        "name": "The Bahamas",
+        "classification": "Water",
+        "audiolink": "http://alexmcvittie.me/mp3s/8.mp3"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 9,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.762596627454485,
+          -38.281930780655856
+        ]
+      },
+      "properties": {
+        "name": "Australia",
+        "classification": "Water",
+        "audiolink": "http://alexmcvittie.me/mp3s/9.mp3"
+      }
+    }
+  ]
+}
