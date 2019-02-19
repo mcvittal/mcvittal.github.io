@@ -109,8 +109,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -68.840416016718294,
-          -18.874842868171999
+          -75.0152,
+          -9.1900
         ]
       },
       "properties": {
@@ -148,7 +148,7 @@
         ]
       },
       "properties": {
-        "name": "Australia",
+        "name": "Melbourne, Australia",
         "classification": "Water",
         "audiolink": "http://alexmcvittie.me/mp3s/9.mp3",
         "imgname": "australia.png"
