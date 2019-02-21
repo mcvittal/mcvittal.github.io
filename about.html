@@ -74,7 +74,12 @@
             <h3 style="font-weight: 400;"><i>"From Bands to a Band"</i></h3>
             <div class="about-product">
                 <p>
-                    SongSAT is a tool to share the beauty of the world in different mediums, expressing the wonders of
+                    Millions of pixels are created every day. We believe that millions of new pieces of music can be generated 
+                    to allow a wider audience to appreciate the vast treasure trove of satellite data we have available today. 
+                    
+                </p>
+                <p>
+                    SongSAT is a global award-winning tool to share the beauty of the world in different mediums, expressing the wonders of
                     satellite imagery through audio. This allows the beauty of satellite imagery to communicate to an
                     audience
                     with visual impairments to enjoy the wonders of the world from above too, or to be used by
@@ -92,7 +97,21 @@
                 </p>
                 <p>
                     <b>How it works:</b><br><br>
-
+                    
+                    <b><i>Simplified explanation</i></b>
+                    <br>
+                    SongSAT determines the most common landcover in the image (If it's mostly over a farm, but has a bit
+                    of water in the image, it's going to translate the image into rural-themed music) to determine
+                    what style of music it generates. It then translates the individual pixels (the small squares that make
+                    up an image) numerical values into notes by taking the remainder of the pixel value (0-255) of the number
+                    of notes in a scale. So, if the theme uses a C major scale, it would divide the pixel value by 8 and take 
+                    the remainder. If the remainder is 0, it would play a C. If the remainder is 1, it would play a D, and so on. <br>
+                    <br>
+                    These outputs are then converted into playable sheet music, which is then brought into a piece of music
+                    software that can play the music back.
+                    <br>
+                    <br>
+                    <b><i>In depth explanation</i></b>
                     The first thing SongSAT does is determine what the predominant land class the image is. To do this,
                     we sample 400 points on the input image and extract the land class at these sample locations from
                     the <a href="http://glcf.umd.edu/data/lc/">Global Land Cover Facility MODIS dataset</a>. We also
