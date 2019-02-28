@@ -143,12 +143,12 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          144.762596627454485,
-          -38.281930780655856
+          143.6500,
+          -38.7500
         ]
       },
       "properties": {
-        "name": "Melbourne, Australia",
+        "name": "Apollo Bay, Australia",
         "classification": "Water",
         "audiolink": "http://alexmcvittie.me/mp3s/9.mp3",
         "imgname": "australia.png"
