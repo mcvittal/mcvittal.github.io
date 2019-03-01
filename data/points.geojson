@@ -153,6 +153,40 @@
         "audiolink": "http://alexmcvittie.me/mp3s/9.mp3",
         "imgname": "australia.png"
       }
+    },
+    {
+      "type": "Feature",
+      "id": 10,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -20.667796,
+          74.997692
+        ]
+      },
+      "properties": {
+        "name": "Greenland",
+        "classification": "Arctic",
+        "audiolink": "http://alexmcvittie.me/mp3s/arctic1.mp3",
+        "imgname": "greenland.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 11,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          62.321976,
+          75.723135
+        ]
+      },
+      "properties": {
+        "name": "Severny Island, Russia",
+        "classification": "Arctic",
+        "audiolink": "http://alexmcvittie.me/mp3s/arctic2.mp3",
+        "imgname": "russia_arctic.png"
+      }
     }
   ]
 }
