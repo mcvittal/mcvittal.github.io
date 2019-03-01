@@ -18,8 +18,8 @@
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-toggleable-md navbar-light fixed-top">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarText"
-            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+            data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <h5 class="navbar-brand align-items-center" style="padding-bottom: 0; margin-bottom: .2rem;">
@@ -46,15 +46,18 @@
             <span class="navbar-text">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/mcvittal/songsat" target="_blank"><i class="fab fa-github"></i>
+                        <a class="nav-link" href="https://github.com/mcvittal/songsat" target="_blank"><i
+                                class="fab fa-github"></i>
                             Github</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://2018.spaceappschallenge.org/challenges/help-others-discover-earth/artify-earth/teams/salinity-1/project"
+                        <a class="nav-link"
+                            href="https://2018.spaceappschallenge.org/challenges/help-others-discover-earth/artify-earth/teams/salinity-1/project"
                             target="_blank"><i class="fas fa-space-shuttle"></i> SpaceApps</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="mailto:teamsalinity@gmail.com" target="_blank"><i class="fas fa-envelope"></i>
+                        <a class="nav-link" href="mailto:teamsalinity@gmail.com" target="_blank"><i
+                                class="fas fa-envelope"></i>
                             Contact us</a>
                     </li>
                 </ul>
@@ -71,15 +74,18 @@
     <section id="songsat-info" class="primary">
         <div class="container">
             <h1>About SongSAT</h1>
-            <h3 style="font-weight: 400;"><i>"From Bands to a Band"</i></h3>
+            <h3><i>"From Bands to a Band"</i></h3>
             <div class="about-product">
                 <p>
-                    Millions of pixels are created every day. We believe that millions of new pieces of music can be generated 
-                    to allow a wider audience to appreciate the vast treasure trove of satellite data we have available today. 
-                    
+                    Millions of pixels are created every day. We believe that millions of new pieces of music can be
+                    generated
+                    to allow a wider audience to appreciate the vast treasure trove of satellite data we have available
+                    today.
+
                 </p>
                 <p>
-                    SongSAT is a global award-winning tool to share the beauty of the world in different mediums, expressing the wonders of
+                    SongSAT is a global award-winning tool to share the beauty of the world in different mediums,
+                    expressing the wonders of
                     satellite imagery through audio. This allows the beauty of satellite imagery to communicate to an
                     audience
                     with visual impairments to enjoy the wonders of the world from above too, or to be used by
@@ -95,69 +101,26 @@
                     play back using MIDI.
 
                 </p>
+                <h5 style="margin-top: 40px;">How SongSAT Works</h5>
+                <h2>Simplified Explanation</h2>
                 <p>
-                    <b>How it works:</b><br><br>
-                    
-                    <b><i>Simplified explanation</i></b>
-                    <br>
                     SongSAT determines the most common landcover in the image (If it's mostly over a farm, but has a bit
                     of water in the image, it's going to translate the image into rural-themed music) to determine
-                    what style of music it generates. It then translates the individual pixels (the small squares that make
-                    up an image) numerical values into notes by taking the remainder of the pixel value (0-255) of the number
-                    of notes in a scale. So, if the theme uses a C major scale, it would divide the pixel value by 8 and take 
-                    the remainder. If the remainder is 0, it would play a C. If the remainder is 1, it would play a D, and so on. <br>
+                    what style of music it generates. It then translates the individual pixels (the small squares that
+                    make
+                    up an image) numerical values into notes by taking the remainder of the pixel value (0-255) of the
+                    number
+                    of notes in a scale. So, if the theme uses a C major scale, it would divide the pixel value by 8 and
+                    take
+                    the remainder. If the remainder is 0, it would play a C. If the remainder is 1, it would play a D,
+                    and so on. <br>
                     <br>
-                    These outputs are then converted into playable sheet music, which is then brought into a piece of music
+                    These outputs are then converted into playable sheet music, which is then brought into a piece of
+                    music
                     software that can play the music back.
                     <br>
                     <br>
-                    <b><i>In depth explanation</i></b><br><br>
-                    
-                    The first thing SongSAT does is determine what the predominant land class the image is. To do this,
-                    we sample 400 points on the input image and extract the land class at these sample locations from
-                    the <a href="http://glcf.umd.edu/data/lc/">Global Land Cover Facility MODIS dataset</a>. We also
-                    compare to see if any points fall in any mountainous regions, using <a href="https://www.unep-wcmc.org/resources-and-data/mountains-and-forests-in-mountains">
-                        a dataset provided by the United Nations</a>, since the MODIS dataset does not have mountains
-                    as a land cover classification. If the majority of the points fall within mountainous pixels, it
-                    returns mountainous as the land cover classification, otherwise it will return the dominant land
-                    cover class fount from the MODIS dataset. <br><br>
-
-                    In order to have music that represents the landscape, a bit of human intervention was needed to
-                    guide the algorithm in the right direction. Due to time constraints, we were only able to create
-                    themes for four dominant land cover classes (Forest, water, mountain, and grassland), but given
-                    more time, we would be able to create themes that are representative of the remaining land cover
-                    classes (arctic, desert, and urban). <br><br>
-
-                    Each theme has a corresponding set of notes that it can play (The water theme uses a pentatonic
-                    scale, the mountain theme uses a combination of semitone clusters and a variation on the minor
-                    scale, and the other two use variations on the major scale), and each theme also has a set of
-                    rhythms for the two voices in the melody to use that are selected at random. SongSAT takes the
-                    modulus of each pixel value to simplify the 0-255 range of the pixel down to the number of notes in
-                    the selected scale, and then maps the new value, which is the degree of the scale, to the
-                    corresponding note in that scale. To make a pleasing accompaniment, the first note of the bar
-                    selected in the melody is made the note for the accompaniment for that bar, with the accompaniment
-                    switching octaves on each note change to add movement and variation to it. Forest however uses a
-                    sixteenth note arpeggiating baseline and mountain uses an aggressive syncopated rhythm instead of a
-                    simple octave switching to better match the mood of the area. All these values are written to a
-                    MIDI file as output. As well, to keep the melody line flowing and not disjointed, it ensures that
-                    no jumps larger than a perfect fifth occur (For example, if the interval is from C to A, it will
-                    choose to go down a major third instead of up a major sixth). <br><br>
-
-                    The MIDI file at the end was then brought into MuseScore, a free and open source notation software
-                    to select more appropriate instruments that fit the mood of the piece. The forest theme uses the
-                    default harp sound that ships with MuseScore, while the rest were instruments chosen from a
-                    third-party soundfont file to make the songs sound better and slightly less artificial.<br><br>
-
-                    <b>Where it will go next:</b><br><br>
-
-                    If our team chooses to pursue improving SongSAT, the next thing to do would be to add the remaining
-                    land classification themes to allow for global coverage of SongSAT, and to add more rhythm options
-                    to the songs to make it feel a bit less monotonous and repetitive, and possibly add in multiple
-                    sections to the songs generated. After these key parts to it are improved, the next step after that
-                    would be to make the program more user-friendly and accessible so that anyone can install and run
-                    it, or make it into a proper web application that generates the music on the fly.
                 </p>
-
                 <p>
                     We're proud to announce that this algorithm is 100% open source, and you can view the code at:
                     <a href="http://github.com/mcvittal/SongSAT" target="_blank">http://github.com/mcvittal/SongSAT</a>
@@ -165,7 +128,65 @@
             </div>
         </div>
     </section>
+    <section id="adv-expl">
+        <div class="container">
+            <h5 style="text-align: center;">How SongSAT Works</h5>
+            <h1>Advanced Explanation</h1>
+            <div class="about-product">
+                The first thing SongSAT does is determine what the predominant land class the image is. To do this,
+                we sample 400 points on the input image and extract the land class at these sample locations from
+                the <a href="http://glcf.umd.edu/data/lc/">Global Land Cover Facility MODIS dataset</a>. We also
+                compare to see if any points fall in any mountainous regions, using <a
+                    href="https://www.unep-wcmc.org/resources-and-data/mountains-and-forests-in-mountains">
+                    a dataset provided by the United Nations</a>, since the MODIS dataset does not have mountains
+                as a land cover classification. If the majority of the points fall within mountainous pixels, it
+                returns mountainous as the land cover classification, otherwise it will return the dominant land
+                cover class fount from the MODIS dataset. <br><br>
 
+                In order to have music that represents the landscape, a bit of human intervention was needed to
+                guide the algorithm in the right direction. Due to time constraints, we were only able to create
+                themes for four dominant land cover classes (Forest, water, mountain, and grassland), but given
+                more time, we would be able to create themes that are representative of the remaining land cover
+                classes (arctic, desert, and urban). <br><br>
+
+                Each theme has a corresponding set of notes that it can play (The water theme uses a pentatonic
+                scale, the mountain theme uses a combination of semitone clusters and a variation on the minor
+                scale, and the other two use variations on the major scale), and each theme also has a set of
+                rhythms for the two voices in the melody to use that are selected at random. SongSAT takes the
+                modulus of each pixel value to simplify the 0-255 range of the pixel down to the number of notes in
+                the selected scale, and then maps the new value, which is the degree of the scale, to the
+                corresponding note in that scale. To make a pleasing accompaniment, the first note of the bar
+                selected in the melody is made the note for the accompaniment for that bar, with the accompaniment
+                switching octaves on each note change to add movement and variation to it. Forest however uses a
+                sixteenth note arpeggiating baseline and mountain uses an aggressive syncopated rhythm instead of a
+                simple octave switching to better match the mood of the area. All these values are written to a
+                MIDI file as output. As well, to keep the melody line flowing and not disjointed, it ensures that
+                no jumps larger than a perfect fifth occur (For example, if the interval is from C to A, it will
+                choose to go down a major third instead of up a major sixth). <br><br>
+
+                The MIDI file at the end was then brought into MuseScore, a free and open source notation software
+                to select more appropriate instruments that fit the mood of the piece. The forest theme uses the
+                default harp sound that ships with MuseScore, while the rest were instruments chosen from a
+                third-party soundfont file to make the songs sound better and slightly less artificial.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="next-steps" class="primary">
+        <div class="container">
+            <h1>Next Steps for SongSAT</h1>
+            <div class="about-product">
+            <p>
+                If our team chooses to pursue improving SongSAT, the next thing to do would be to add the remaining
+                land classification themes to allow for global coverage of SongSAT, and to add more rhythm options
+                to the songs to make it feel a bit less monotonous and repetitive, and possibly add in multiple
+                sections to the songs generated. After these key parts to it are improved, the next step after that
+                would be to make the program more user-friendly and accessible so that anyone can install and run
+                it, or make it into a proper web application that generates the music on the fly.
+            </p>
+            </div>
+        </div>
+    </section>
     <section id="songsat-video">
         <div class="container">
             <h1>Product Video</h1>
@@ -191,7 +212,8 @@
                 <div class="col-12 col-lg-3">
                     <div class="row">
                         <div class="col-12 col-sm-3 col-lg-12 d-flex align-items-center justify-content-center">
-                            <img class="rounded-circle img-fluid mx-auto img-about-member" src="images/profiles/alex-mcvittie.jpg">
+                            <img class="rounded-circle img-fluid mx-auto img-about-member"
+                                src="images/profiles/alex-mcvittie.jpg">
                         </div>
                         <div class="col-12 col-sm-9 col-lg-12 about-member">
                             <div class="col-12">
@@ -210,7 +232,8 @@
                                 </p>
                             </div>
                             <div class="col-12">
-                                Personal portfolio: <a href="http://alexmcvittie.me" target="_blank">http://alexmcvittie.me</a>
+                                Personal portfolio: <a href="http://alexmcvittie.me"
+                                    target="_blank">http://alexmcvittie.me</a>
                             </div>
                         </div>
                         <div class="col-12 divider">
@@ -221,7 +244,8 @@
                 <div class="col-12 col-lg-3">
                     <div class="row">
                         <div class="col-12 col-sm-3 col-lg-12 d-flex align-items-center justify-content-center">
-                            <img class="rounded-circle img-fluid mx-auto img-about-member" src="images/profiles/colin-tm.jpg">
+                            <img class="rounded-circle img-fluid mx-auto img-about-member"
+                                src="images/profiles/colin-tm.jpg">
                         </div>
                         <div class="col-12 col-sm-9 col-lg-12 about-member">
                             <div class="col-12">
@@ -254,7 +278,8 @@
                 <div class="col-12 col-lg-3">
                     <div class="row">
                         <div class="col-12 col-sm-3 col-lg-12 d-flex align-items-center justify-content-center">
-                            <img class="rounded-circle img-fluid mx-auto img-about-member" src="images/profiles/corina-kwong.jpg">
+                            <img class="rounded-circle img-fluid mx-auto img-about-member"
+                                src="images/profiles/corina-kwong.jpg">
                         </div>
                         <div class="col-12 col-sm-9 col-lg-12 about-member">
                             <div class="col-12">
@@ -271,7 +296,8 @@
                                 </p>
                             </div>
                             <div class="col-12">
-                                <a href="https://www.linkedin.com/in/corinakwong/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+                                <a href="https://www.linkedin.com/in/corinakwong/" target="_blank"><i
+                                        class="fab fa-linkedin fa-2x"></i></a>
                             </div>
                         </div>
                         <div class="col-12 divider">
@@ -282,7 +308,8 @@
                 <div class="col-12 col-lg-3">
                     <div class="row">
                         <div class="col-12 col-sm-3 col-lg-12 d-flex align-items-center justify-content-center">
-                            <img class="rounded-circle img-fluid mx-auto img-about-member" src="images/profiles/janet-hu.jpg">
+                            <img class="rounded-circle img-fluid mx-auto img-about-member"
+                                src="images/profiles/janet-hu.jpg">
                         </div>
                         <div class="col-12 col-sm-9 col-lg-12 about-member">
                             <div class="col-12">
@@ -299,7 +326,8 @@
                                 </p>
                             </div>
                             <div class="col-12">
-                                <a href="https://www.linkedin.com/in/janet-hu-a1a11279" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+                                <a href="https://www.linkedin.com/in/janet-hu-a1a11279" target="_blank"><i
+                                        class="fab fa-linkedin fa-2x"></i></a>
                             </div>
                         </div>
                     </div>
