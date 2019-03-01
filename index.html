@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css">
+
+    <script src="audiocontrols.js"></script>
 </head>
 
 <body>
@@ -70,6 +72,16 @@
     <h3>Click on any of the location markers to hear a sample SongSAT output!</h3>
     <div class="container">
         <div id="map"></div>
+        <div class="text-center mt-3 mb-4">
+            <h5>Master Audio Controls</h5>
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button id="audio-pause" onclick="pauseAudio();" type="button" class="btn btn-secondary"><i id="btn-pause" class="fas fa-pause"></i></button>
+                <button id="audio-stop" onclick="stopAudio();" type="button" class="btn btn-secondary"><i
+                        class="fas fa-stop"></i></button>
+                <button id="audio-mute" type="button" class="btn btn-secondary"><i
+                        class="fas fa-volume-mute"></i></button>
+            </div>
+        </div>
     </div>
 
     <!-- Modal -->
