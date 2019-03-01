@@ -6,8 +6,8 @@ var points = new L.GeoJSON.AJAX("data/points.geojson", { onEachFeature: popUp })
 
 points.on('click', function (e) { playAudio(e.layer.feature.properties.audiolink) });
 
-var colourmap = L.tileLayer('http://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '<a href="http://openstreetmap.org/" target="_blank">OpenStreetMap</a>, <a href="https://github.com/calvinmetcalf/leaflet-ajax" target="_blank">Leaflet Ajax</a>',
+var colourmap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Physical_Map/MapServer/tile/{z}/{y}/{x}', {
+    attribution: 'Tiles &copy; Esri &mdash; Source: US National Park Service, <a href="https://github.com/calvinmetcalf/leaflet-ajax" target="_blank">Leaflet Ajax</a>',
     noWrap: true, maxZoom: 5, minZoom: 2
 });
 
