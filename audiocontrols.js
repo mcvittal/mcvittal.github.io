@@ -8,10 +8,9 @@ function playAudio(src) {
     window.audio.play();
     playing = true;
     resetPauseBtn();
-    
+
     window.audio.addEventListener("ended", function () {
         audio.currentTime = 0;
-        console.log("ended");
         playing = false;
     });
 }
@@ -35,6 +34,7 @@ function pauseAudio() {
 function stopAudio() {
     audio.pause();
     audio.currentTime = 0;
+    resetPauseBtn();
     playing = false;
 }
 
