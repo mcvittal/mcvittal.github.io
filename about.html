@@ -94,29 +94,23 @@
                     with musical writing blocks.
                 </p>
                 <p>
-                    Our team produced an algorithm, SongSAT, to convert four distinct geographical areas (Grasslands,
-                    forest,
-                    coastal/water areas, and mountainous areas) into songs with distinct, recognizable musical patterns
-                    that
-                    play back using MIDI.
+                    Our team produced an algorithm, SongSAT, to convert five distinct geographical areas (Arctic, Grasslands,
+                    Forest, Coastal/Water areas, and Mountainous regions) into songs with distinct, recognizable musical
+                    patterns that play back using MIDI.
 
                 </p>
                 <h5 style="margin-top: 40px;">How SongSAT Works</h5>
                 <h2>Simplified Explanation</h2>
                 <p>
-                    SongSAT determines the most common landcover in the image (If it's mostly over a farm, but has a bit
-                    of water in the image, it's going to translate the image into rural-themed music) to determine
-                    what style of music it generates. It then translates the individual pixels (the small squares that
-                    make
-                    up an image) numerical values into notes by taking the remainder of the pixel value (0-255) of the
-                    number
-                    of notes in a scale. So, if the theme uses a C major scale, it would divide the pixel value by 8 and
-                    take
-                    the remainder. If the remainder is 0, it would play a C. If the remainder is 1, it would play a D,
-                    and so on. <br>
+                    SongSAT determines the most common landcover type in a LandSAT image to determine what style of music it generates.
+                    For instance, if an image is mainly covered with agricultural fields and a small lake, SongSAT will translate the
+                    image into rural-themed music. This is achieved by translating each pixel's (the small squares that make
+                    up an image) digital number into notes. This process takes the remainder of the pixel's digital number (0-255) divided by the
+                    number of notes in a scale. Hence, if the theme uses a C major scale, it would divide the pixel value by 8 and
+                    take the remainder. If the remainder is 0, it would play a C. If the remainder is 1, it would play a D,
+                    and so forth. <br>
                     <br>
-                    These outputs are then converted into playable sheet music, which is then brought into a piece of
-                    music
+                    These generated outputs are converted into playable sheet music, which is then brought into a music
                     software that can play the music back.
                     <br>
                     <br>
@@ -144,7 +138,7 @@
                 cover class fount from the MODIS dataset. <br><br>
 
                 In order to have music that represents the landscape, a bit of human intervention was needed to
-                guide the algorithm in the right direction. We are working to support all land cover types, and have 
+                guide the algorithm in the right direction. We are working to support all land cover types, and have
                 successfully created five of the seven dominant land classes (Mountain, water, rural, forest, and arctic
                 have been created, with desert and urban remaining to be created). <br><br>
 
@@ -175,14 +169,14 @@
         <div class="container">
             <h1>Next Steps for SongSAT</h1>
             <div class="about-product">
-            <p>
-                If our team chooses to pursue improving SongSAT, the next thing to do would be to add the remaining
-                land classification themes to allow for global coverage of SongSAT, and to add more rhythm options
-                to the songs to make it feel a bit less monotonous and repetitive, and possibly add in multiple
-                sections to the songs generated. After these key parts to it are improved, the next step after that
-                would be to make the program more user-friendly and accessible so that anyone can install and run
-                it, or make it into a proper web application that generates the music on the fly.
-            </p>
+                <p>
+                    If our team chooses to pursue improving SongSAT, the next thing to do would be to add the remaining
+                    land classification themes to allow for global coverage of SongSAT, and to add more rhythm options
+                    to the songs to make it feel a bit less monotonous and repetitive, and possibly add in multiple
+                    sections to the songs generated. After these key parts to it are improved, the next step after that
+                    would be to make the program more user-friendly and accessible so that anyone can install and run
+                    it, or make it into a proper web application that generates the music on the fly.
+                </p>
             </div>
         </div>
     </section>
