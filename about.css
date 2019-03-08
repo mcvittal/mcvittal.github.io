@@ -12,6 +12,10 @@ body {
 .navbar-collapse, .dropdown-menu {
     text-align: center !important;
 }
+video {
+    width: 100%;
+    height: auto;
+  }
 
 .navbar-toggler {
     outline: none !important;
