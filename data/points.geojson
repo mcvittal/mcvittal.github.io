@@ -14,7 +14,7 @@
       "properties": {
         "name": "Russia",
         "classification": "Forest",
-        "audiolink": "http://alexmcvittie.me/mp3s/3.mp3",
+        "audiolink": "https://songsat.ca/mp3s/3.mp3",
         "imgname": "russia.png"
       }
     },
@@ -31,7 +31,7 @@
       "properties": {
         "name": "Democratic Republic of the Congo",
         "classification": "Forest",
-        "audiolink": "http://alexmcvittie.me/mp3s/4.mp3",
+        "audiolink": "https://songsat.ca/mp3s/4.mp3",
         "imgname": "congo.png"
       }
     },
@@ -48,7 +48,7 @@
       "properties": {
         "name": "Saskatchewan, Canada",
         "classification": "Grassland",
-        "audiolink": "http://alexmcvittie.me/mp3s/2.mp3",
+        "audiolink": "https://songsat.ca/mp3s/2.mp3",
         "imgname": "saskatchewan.png"
       }
     },
@@ -65,7 +65,7 @@
       "properties": {
         "name": "Texas, United States of America",
         "classification": "Grassland",
-        "audiolink": "http://alexmcvittie.me/mp3s/1.mp3",
+        "audiolink": "https://songsat.ca/mp3s/1.mp3",
         "imgname": "texas.png"
       }
     },
@@ -82,7 +82,7 @@
       "properties": {
         "name": "Switzerland",
         "classification": "Mountainous",
-        "audiolink": "http://alexmcvittie.me/mp3s/7.mp3",
+        "audiolink": "https://songsat.ca/mp3s/7.mp3",
         "imgname": "switzerland.png"
       }
     },
@@ -99,7 +99,7 @@
       "properties": {
         "name": "China",
         "classification": "Mountainous",
-        "audiolink": "http://alexmcvittie.me/mp3s/6.mp3",
+        "audiolink": "https://songsat.ca/mp3s/6.mp3",
         "imgname": "china.png"
       }
     },
@@ -116,7 +116,7 @@
       "properties": {
         "name": "Peru",
         "classification": "Mountainous",
-        "audiolink": "http://alexmcvittie.me/mp3s/5.mp3",
+        "audiolink": "https://songsat.ca/mp3s/5.mp3",
         "imgname": "peru.png"
       }
     },
@@ -133,7 +133,7 @@
       "properties": {
         "name": "The Bahamas",
         "classification": "Water",
-        "audiolink": "http://alexmcvittie.me/mp3s/8.mp3",
+        "audiolink": "https://songsat.ca/mp3s/8.mp3",
         "imgname": "bahamas.png"
       }
     },
@@ -150,7 +150,7 @@
       "properties": {
         "name": "Apollo Bay, Australia",
         "classification": "Water",
-        "audiolink": "http://alexmcvittie.me/mp3s/9.mp3",
+        "audiolink": "https://songsat.ca/mp3s/9.mp3",
         "imgname": "australia.png"
       }
     },
@@ -167,7 +167,7 @@
       "properties": {
         "name": "Greenland",
         "classification": "Arctic",
-        "audiolink": "http://alexmcvittie.me/mp3s/arctic1.mp3",
+        "audiolink": "https://songsat.ca/mp3s/arctic1.mp3",
         "imgname": "greenland.png"
       }
     },
@@ -184,7 +184,7 @@
       "properties": {
         "name": "Severny Island, Russia",
         "classification": "Arctic",
-        "audiolink": "http://alexmcvittie.me/mp3s/arctic2.mp3",
+        "audiolink": "https://songsat.ca/mp3s/arctic2.mp3",
         "imgname": "russia_arctic.png"
       }
     }
