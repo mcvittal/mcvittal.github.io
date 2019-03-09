@@ -41,6 +41,12 @@ video {
     padding: 8px;
 }
 
+@media (min-width: 1000px) {
+    .collapse {
+        display: none !important;
+    }
+ }
+
 h1 {
     text-align: center;
     font-weight: 700;
@@ -136,4 +142,12 @@ section.primary {
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+.card {
+    height: 100%;
+}
+
+.card-body {
+    padding: 1.25rem !important;
 }
