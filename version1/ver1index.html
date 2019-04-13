@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <title>SongSAT by Team Salinity</title>
+    <link rel="icon" type="image/png" href="../favicon.png" />
+    <link rel="stylesheet" href="../styles/universal.css">
+    <link rel="stylesheet" href="../styles/index.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css">
+
+    <script src="audiocontrols.js"></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-toggleable-md navbar-light">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+            data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <h5 class="navbar-brand align-items-center" style="padding-bottom: 0; margin-bottom: .2rem;">
+            <img src="../images/logo.svg" width="25" height="25" class="d-inline-block align-top" alt="">
+            SongSAT</h5>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html#main">Our Logo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html#songsat-info">About SongSAT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html#songsat-video">Product Video</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html#salinity">Team Salinity</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="media.html">Media Coverage</a>
+                </li>
+            </ul>
+            <span class="navbar-text">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/mcvittal/songsat" target="_blank"><i
+                                class="fab fa-github"></i> <span class="hide-txt">Github</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                            href="https://2018.spaceappschallenge.org/challenges/help-others-discover-earth/artify-earth/teams/salinity-1/project"
+                            target="_blank"><i class="fas fa-space-shuttle"></i> <span class="hide-txt">SpaceApps</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mailto:teamsalinity@gmail.com" target="_blank"><i
+                                class="fas fa-envelope"></i> <span class="hide-txt">Contact us</span></a>
+                    </li>
+                </ul>
+            </span>
+        </div>
+    </nav>
+    <!-- /end of Navigation -->
+    <h3>Click on any of the location markers to hear a sample SongSAT output!</h3>
+    <div class="container">
+        <div id="map"></div>
+        <div class="text-center mt-3 mb-4">
+            <h5>Master Audio Controls</h5>
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button id="audio-pause" onclick="pauseAudio();" type="button" class="btn btn-secondary"><i
+                        id="btn-pause" class="fas fa-pause"></i></button>
+                <button id="audio-stop" onclick="stopAudio();" type="button" class="btn btn-secondary"><i
+                        class="fas fa-stop"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="landsatModal" tabindex="-1" role="dialog" aria-labelledby="landsatModalLabel">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="landsatModalLabel"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <div id="modal-img"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.js"></script>
+    <script src="leaflet-grayscale/TileLayer.Grayscale.js"></script>
+    <script src="../scrolling.js"></script>
+    <script src="ver1map.js"></script>
+</body>
+
+</html>
