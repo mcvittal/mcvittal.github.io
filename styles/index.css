@@ -72,12 +72,6 @@
     
 }
 
-@media screen and (max-width: 1300px) {
-    .videoBackground {
-        height: 100vh;
-    }
-}
-
 @media screen and (min-width: 1300px) {
     .videoBackground,
     .videoBackgroundWrapper {
