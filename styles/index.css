@@ -1,26 +1,225 @@
-#map {
+/* ---------------------------------------------------
+    MAIN STYLE
+----------------------------------------------------- */
+.navbar {
+    background: black;
+    opacity: 0.6;
+    position: fixed;
+    top: 0;
+    z-index: 2;
     width: 100%;
-    height: 680px;
-    border: 1px solid gainsboro;
 }
 
-.leaflet-popup-content {
+.navbar-brand span {
+    color: #fff;
+}
+
+.nav-link, .btn-menu {
+    color: #fff !important;
+    background-color: transparent;
+}
+
+.alert {
+    z-index: 2;
+    position: fixed;
+    top: -100%;
+    right: 1%;
+    transition: all 1s ease;
+}
+.alert-heading {
+    font-weight: 700;
+}
+
+.alert p {
+    color: #383d41;
+}
+  
+.alert.in {
+    top: 1.5%;
+  }
+/* ---------------------------------------------------
+    VIDEO LANDING STYLE
+----------------------------------------------------- */
+#video {
+    background-color: black;
+    
+}
+
+.caption {
+    position: absolute;
+    display: flex;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
     text-align: center;
-}
+    text-shadow: 0px 0px 14px rgba(0,0,0,0.7);
+   }
 
-.leaflet-popup-content {
-    text-align: center;
-}
-
-.img-points {
-    width: 150px;
-    height: 150px;
+.caption .videoButtonWrapper {
+    flex-direction: row;
     margin-bottom: 10px;
-    margin-top: 4px;
 }
 
-h3 {
-    text-align: center;
-    margin: 25px 0px !important;
-    font-weight: 500;
+.videoBackgroundWrapper{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    
+}
+
+@media screen and (max-width: 1300px) {
+    .videoBackground {
+        height: 100vh;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .videoBackground,
+    .videoBackgroundWrapper {
+        width: 100%;
+    }
+}
+
+.caption .fa-chevron-down {
+    position: absolute;
+    bottom: 35px;
+    opacity: 0.5;
+}
+
+.bounce {
+    animation: bounce 2s infinite;
+  }
+  
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.caption h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    text-shadow: .1rem .1rem .8rem black;
+    padding-bottom: 1rem;
+}
+
+.caption h3 {
+    font-size: 2.5rem;
+    text-shadow: .1rem .1rem .5rem black;
+    padding-bottom: 1.6rem;
+}
+
+.btn-lg {
+    border-width: medium;
+    border-radius: 0;
+    font-size: 1.1rem;
+    padding: .6rem 1.3rem;
+}
+
+@media (max-width: 576px) {   
+    .caption h1 {
+        letter-spacing: .15rem;
+        padding-bottom: .5rem;
+    }
+    
+    .caption h3 {
+        font-size: 1.5rem;
+        padding-bottom: 1.2rem;
+    }
+    
+    .btn-lg {
+        font-size: 1rem;
+        padding: .5rem 1rem;
+    }
+}
+
+@media (min-width: 1600px) {   
+    .caption h1 {
+        font-size: 4.5vw;
+    }
+
+    .caption h3 {
+        font-size: 2.5vw;
+    }
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+#content {
+    width: 100%;
+    min-height: 100vh;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#content .col-md-10 {
+    margin: 2rem auto 5rem;
+    padding-top: 2rem;
+}
+
+#content .container h1 {
+    font-weight: 700;
+    margin-bottom: 2.5rem !important;
+}
+
+#content .primary-btn {
+    background: #00A8A8;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    -webkit-box-shadow: 0px 4px 10px 0px rgba(0,122,122,0.5);
+    -moz-box-shadow: 0px 4px 10px 0px rgba(0,122,122,0.5);
+    box-shadow: 0px 4px 10px 0px rgba(0,122,122,0.5);
+    
+}
+
+#content .primary-btn:hover {
+    background: #00c7c7;
+}
+
+#content .primary-btn:active {
+    background: #008989;
+}
+
+.line-title {
+    position: relative;
+    margin-top: 0;
+}
+
+.line-title:before {
+    content: "";
+    display: block;
+    border-top: 1px dashed #00CECE;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+}
+
+.line-title span {
+    background: #fafafa;
+    padding: 0 20px;
+    position: relative;
+    z-index: 5;
 }

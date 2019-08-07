@@ -7,14 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <link rel="icon" type="image/png" href="images/favicon.png" />
-    <title>About • SongSAT</title>
+    <title>404 • SongSAT</title>
 
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
         integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="styles/universal.css">
-    <link rel="stylesheet" href="styles/about.css">
     <!-- Scrollbar Custom CSS -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
@@ -62,10 +61,10 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="https://vimeo.com/297604867">Product Video</a>
+                    <a href="#">Product Video</a>
                 </li>
                 <li>
-                    <a href="404.html">Media Coverage</a>
+                    <a href="#">Media Coverage</a>
                 </li>
                 <li>
                     <a href="contact.html">Contact Us</a>
@@ -74,13 +73,14 @@
 
             <ul class="list-unstyled CTAs">
                 <li>
-                    <a href="404.html" class="primary-btn">Try SongSAT Demo</a>
+                    <a href="demo.html" class="primary-btn">Try SongSAT Demo</a>
                 </li>
             </ul>
         </nav>
 
         <!-- Page Content  -->
         <div id="content">
+            <!-- Navigation -->
             <!-- Navigation -->
             <nav class="navbar navbar-expand-lg">
                 <div class="row mx-auto" style="width:100%">
@@ -119,126 +119,13 @@
                     </div>
                 </div>
             </nav>
+            <div class="container text-center mt-5">
+                <img class="img-fluid" src="images/404.png">
+            </div>
 
-            <!-- Logo Explanation -->
-            <section id="logo">
-                <div class="container" style="margin-top: 2.5rem;">
-                    <h1>Our Logo</h1>
-                    <div class="text-center">
-                        <img src="images/logo-black.png">
-                        <p class="logo-caption" style="margin-top: 2.5rem;">Our logo is a satellite made from a rotated
-                            fermata and a half rest.</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Content Divider -->
-            <div class="line"></div>
-
-            <!-- SongSAT Detailed Explanation -->
-            <section id="adv-expl">
-                <div class="container">
-                    <h1>How SongSAT Works</h1>
-                    <div class="about-product">
-                        <p>
-                            The first thing SongSAT does is determine what the predominant land class the image is. To
-                            do
-                            this,
-                            we sample 400 points on the input image and extract the land class at these sample locations
-                            from
-                            the <a href="http://glcf.umd.edu/data/lc/">Global Land Cover Facility MODIS dataset</a>. We
-                            also
-                            compare to see if any points fall in any mountainous regions, using <a
-                                href="https://www.unep-wcmc.org/resources-and-data/mountains-and-forests-in-mountains">
-                                a dataset provided by the United Nations</a>, since the MODIS dataset does not have
-                            mountains
-                            as a land cover classification. If the majority of the points fall within mountainous
-                            pixels, it
-                            returns mountainous as the land cover classification, otherwise it will return the dominant
-                            land
-                            cover class fount from the MODIS dataset.</p>
-
-                        <p>
-                            In order to have music that represents the landscape, a bit of human intervention was needed
-                            to
-                            guide the algorithm in the right direction. We are working to support all land cover types,
-                            and
-                            have
-                            successfully created five of the seven dominant land classes (Mountain, water, rural,
-                            forest,
-                            and arctic
-                            have been created, with desert and urban remaining to be created).</p>
-
-                        <p>Each theme has a corresponding set of notes that it can play (The water theme uses a
-                            pentatonic
-                            scale, the mountain theme uses a combination of semitone clusters and a variation on the
-                            minor
-                            scale, and the other two use variations on the major scale), and each theme also has a set
-                            of
-                            rhythms for the two voices in the melody to use that are selected at random. SongSAT takes
-                            the
-                            modulus of each pixel value to simplify the 0-255 range of the pixel down to the number of
-                            notes
-                            in
-                            the selected scale, and then maps the new value, which is the degree of the scale, to the
-                            corresponding note in that scale. To make a pleasing accompaniment, the first note of the
-                            bar
-                            selected in the melody is made the note for the accompaniment for that bar, with the
-                            accompaniment
-                            switching octaves on each note change to add movement and variation to it. Forest however
-                            uses a
-                            sixteenth note arpeggiating baseline and mountain uses an aggressive syncopated rhythm
-                            instead
-                            of a
-                            simple octave switching to better match the mood of the area. All these values are written
-                            to a
-                            MIDI file as output. As well, to keep the melody line flowing and not disjointed, it ensures
-                            that
-                            no jumps larger than a perfect fifth occur (For example, if the interval is from C to A, it
-                            will
-                            choose to go down a major third instead of up a major sixth). </p>
-
-                        <p>The MIDI file at the end was then brought into MuseScore, a free and open source notation
-                            software
-                            to select more appropriate instruments that fit the mood of the piece. The forest theme uses
-                            the
-                            default harp sound that ships with MuseScore, while the rest were instruments chosen from a
-                            third-party soundfont file to make the songs sound better and slightly less artificial.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Content Divider -->
-            <div class="line"></div>
-
-            <!-- Next Steps for SongSAT -->
-            <section id="next-steps">
-                <div class="container">
-                    <h1>Next Steps for SongSAT</h1>
-                    <div class="about-product">
-                        <p>
-                            If our team chooses to pursue improving SongSAT, the next thing to do would be to add the
-                            remaining
-                            land classification themes to allow for global coverage of SongSAT, and to add more rhythm
-                            options
-                            to the songs to make it feel a bit less monotonous and repetitive, and possibly add in
-                            multiple
-                            sections to the songs generated. After these key parts to it are improved, the next step
-                            after that
-                            would be to make the program more user-friendly and accessible so that anyone can install
-                            and run
-                            it, or make it into a proper web application that generates the music on the fly.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Content Divider -->
-            <div class="line"></div>
         </div>
         <!-- Footer -->
-        <footer>
+        <footer style="bottom: 0;">
             <div class="container text-center">
                 <small>SongSAT by <a href="contact.html">Team Salinity</a> for <a
                         href="https://2018.spaceappschallenge.org/" target="_blank">NASA's Space Apps Challenge
@@ -246,8 +133,6 @@
             </div>
         </footer>
     </div>
-
-
 
     <!-- Screen Overlay When Sidemenu Appears -->
     <div class="overlay"></div>

@@ -1,116 +1,277 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
 
+    <link rel="icon" type="image/png" href="images/favicon.png" />
     <title>SongSAT by Team Salinity</title>
-    <link rel="icon" type="image/png" href="favicon.png" />
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
     <link rel="stylesheet" href="styles/universal.css">
     <link rel="stylesheet" href="styles/index.css">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css">
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+        integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+        integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+        crossorigin="anonymous"></script>
 
-    <script src="audiocontrols.js"></script>
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-toggleable-md navbar-light">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-            data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <h5 class="navbar-brand align-items-center" style="padding-bottom: 0; margin-bottom: .2rem;">
-            <img src="images/logo.svg" width="25" height="25" class="d-inline-block align-top" alt="">
-            SongSAT</h5>
-        <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav mr-auto align-items-center">
-                <li class="nav-item">
-                    <a class="nav-link" href="">Home</a>
+
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div id="dismiss">
+                <i class="fas fa-arrow-left"></i>
+            </div>
+
+            <div class="sidebar-header">
+                <h3>Menu</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="index.html">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html#main">Our Logo</a>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">About <span
+                            class="float-right"><i class="fas fa-angle-right"></i></span></a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="about.html">More About SongSAT</a>
+                        </li>
+                        <li>
+                            <a href="about.html">Our Logo</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Our Team</a>
+                        </li>
+                    </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html#songsat-info">About SongSAT</a>
+                <li>
+                    <a href="https://vimeo.com/297604867">Product Video</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html#songsat-video">Product Video</a>
+                <li>
+                    <a href="404.html">Media Coverage</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html#salinity">Team Salinity</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="media.html">Media Coverage</a>
+                <li>
+                    <a href="contact.html">Contact Us</a>
                 </li>
             </ul>
-            <span class="navbar-text">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/mcvittal/songsat" target="_blank"><i
-                                class="fab fa-github"></i> <span class="hide-txt">Github</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link"
-                            href="https://2018.spaceappschallenge.org/challenges/help-others-discover-earth/artify-earth/teams/salinity-1/project"
-                            target="_blank"><i class="fas fa-space-shuttle"></i> <span class="hide-txt">SpaceApps</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="mailto:teamsalinity@gmail.com" target="_blank"><i
-                                class="fas fa-envelope"></i> <span class="hide-txt">Contact us</span></a>
-                    </li>
-                </ul>
-            </span>
-        </div>
-    </nav>
-    <!-- /end of Navigation -->
-    <h3>Click on any of the location markers to hear a sample SongSAT output!</h3>
-    <div class="container">
-        <div id="map"></div>
-        <div class="text-center mt-3 mb-4">
-            <h5>Master Audio Controls</h5>
-            <div class="btn-group" role="group" aria-label="Basic example">
-                <button id="audio-pause" onclick="pauseAudio();" type="button" class="btn btn-secondary"><i
-                        id="btn-pause" class="fas fa-pause"></i></button>
-                <button id="audio-stop" onclick="stopAudio();" type="button" class="btn btn-secondary"><i
-                        class="fas fa-stop"></i></button>
-            </div>
-        </div>
-    </div>
 
-    <!-- Modal -->
-    <div class="modal fade" id="landsatModal" tabindex="-1" role="dialog" aria-labelledby="landsatModalLabel">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="landsatModalLabel"></h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                            aria-hidden="true">&times;</span></button>
+            <ul class="list-unstyled CTAs">
+                <li>
+                    <a href="404.html" class="primary-btn">Try SongSAT Demo</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+            <!-- Navigation -->
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="row mx-auto" style="width:100%">
+                    <div class="col">
+                        <button type="button" id="sidebarCollapse" class="btn btn-menu">
+                            <i class="fas fa-bars"></i> Menu
+                        </button>
+                    </div>
+                    <div class="col text-center">
+                        <a class="navbar-brand" href="index.html"><img src="images/logo-bw.png" alt=""></a>
+                    </div>
+                    <div class="col">
+                        <button class="btn nav-link d-inline-block d-lg-none ml-auto float-right" type="button"
+                            data-toggle="collapse" data-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </button>
+                        <div class="collapse navbar-collapse text-right" id="navbarSupportedContent">
+                            <ul class="nav navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="https://github.com/mcvittal/songsat"
+                                        target="_blank">Github</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link"
+                                        href="https://2018.spaceappschallenge.org/challenges/help-others-discover-earth/artify-earth/teams/salinity-1/project"
+                                        target="_blank">SpaceApps</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="mailto:teamsalinity@gmail.com">Contact
+                                        Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="modal-body">
-                    <div id="modal-img"></div>
+            </nav>
+
+            <div id="reno-alert" class="alert alert-secondary alert-dismissible fade show" role="alert">
+                <h4 class="alert-heading">Welcome to the SongSAT website!</h4>
+                <p class="mb-0">We are currently going through some renovations on the website, so please bear with us!
+                    <br>Keep checking our website to see what we have in stock for you on our completed site!
+                </p>
+
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <!-- Video Landing -->
+            <div class="videoBackgroundWrapper">
+                <video id="vidbg" autoplay muted loop playsinline class="videoBackground">
+                    <source src="world.mp4" type="video/mp4">
+                </video>
+
+                <div class="caption">
+                    <h1>SONGSAT</h1>
+                    <h3>FROM BANDS TO A BAND</h3>
+                    <div class="videoButtonWrapper">
+                        <a class="btn btn-outline-light btn-lg" href="demo.html">TRY LIVE DEMO</a>
+                    </div>
+                    <i class="fas fa-chevron-down fa-2x bounce"></i>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.js"></script>
-    <script src="leaflet-grayscale/TileLayer.Grayscale.js"></script>
-    <script src="scrolling.js"></script>
-    <script src="songsatmap.js"></script>
+            <!-- Brief Intro to SongSAT -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 text-center">
+                        <h1>Millions of pixels are created every day.</h1>
+                        <p class="text-justify">We believe that millions of new pieces of music can
+                            be generated to allow a wider audience to appreciate the vast treasure trove of satellite
+                            data we have
+                            available today.
+                        </p>
+                        <p class="text-justify">
+                            SongSAT is a global award-winning tool to share the beauty of the world in different
+                            mediums, expressing the
+                            wonders of satellite imagery through audio. This allows the beauty of satellite imagery to
+                            communicate
+                            to an
+                            audience with visual impairments to enjoy the wonders of the world from above too, or to be
+                            used by
+                            musicians to aid with musical writing blocks.
+                        </p>
+                        <p class="text-justify" style="margin-bottom: 2.5rem;">
+                            Our team produced an algorithm, SongSAT, to convert five distinct geographical areas
+                            (Arctic,
+                            Grasslands,
+                            Forest, Coastal/Water areas, and Mountainous regions) into songs with distinct, recognizable
+                            musical
+                            patterns that play back using MIDI.
+                        </p>
+
+                        <a class="btn primary-btn" href="about.html">Learn more about SongSAT</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image Banner -->
+            <!--<div>
+                <div class="banner-wrapper">
+                    <img class="banner" src="images/banner-million-pixel.png">
+                    <div class="banner-caption">
+                        "We're salty so you don't have to be."
+                    </div>
+                </div>
+            </div>-->
+
+            <!-- Featured In-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 text-center">
+                        <h2 class="line-title"><span>Featured In</span></h2>
+                        <br><br>
+                        <div class="row" style="margin-bottom: 4rem;">
+                            <div class="col">
+                                <img class="img-fluid" style="max-height: 100px;" src="images/featuredlogo/ctvnews.png"
+                                    alt="CTV News">
+                            </div>
+                            <div class="col">
+                                <img class="img-fluid" style="max-height: 100px;"
+                                    src="images/featuredlogo/uwaterloo.png" alt="University of Waterloo">
+                            </div>
+                            <div class="col">
+                                <img class="img-fluid" style="max-height: 100px;" src="images/featuredlogo/570news.png"
+                                    alt="570 News">
+                            </div>
+                            <div class="col">
+                                <img class="img-fluid" style="max-height: 100px;"
+                                    src="images/featuredlogo/gogeomaticscanada.png" alt="GoGeomatics Canada">
+                            </div>
+                        </div>
+                        <a class="btn primary-btn" href="404.html">Read SongSAT's Media Coverage</a>
+                        </row>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer>
+                <div class="container text-center">
+                    <small>SongSAT by <a href="contact.html">Team Salinity</a> for <a
+                            href="https://2018.spaceappschallenge.org/" target="_blank">NASA's Space Apps Challenge
+                            2018</a></small>
+                </div>
+            </footer>
+        </div>
+
+
+        <!-- Screen Overlay When Sidemenu Appears -->
+        <div class="overlay"></div>
+
+        <!-- jQuery CDN - Slim version (=without AJAX) -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <!-- Popper.JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+            integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+            crossorigin="anonymous"></script>
+        <!-- Bootstrap JS -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+            integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+            crossorigin="anonymous"></script>
+        <!-- jQuery Custom Scroller CDN -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+        <!-- Script for Sidebar Menu -->
+        <script type="text/javascript">
+            $('#reno-alert').toggleClass('in');
+
+            $(document).ready(function () {
+                $("#sidebar").mCustomScrollbar({
+                    theme: "minimal"
+                });
+
+                $('#dismiss, .overlay').on('click', function () {
+                    $('#sidebar').removeClass('active');
+                    $('.overlay').removeClass('active');
+                });
+
+                $('#sidebarCollapse').on('click', function () {
+                    $('#sidebar').addClass('active');
+                    $('.overlay').addClass('active');
+                    $('.collapse.in').toggleClass('in');
+                    $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+                });
+            });
+        </script>
 </body>
 
 </html>
