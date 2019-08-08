@@ -5,14 +5,23 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap');
 
+html, body, .wrapper {
+    height: 100%;
+    margin: 0;
+}
+
 body {
     font-family: 'Lato', sans-serif;
     background: #fafafa;
 }
 
 .wrapper {
-    height: 100%;
-    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#content {
+    flex: 1 0 auto;
 }
 
 p {
@@ -35,6 +44,24 @@ a:focus {
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
 }
 
+@media screen and (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 0.75rem;
+        padding-left: 0.75rem;
+    }
+    .btn-menu {
+        display: none;
+    }
+}
+
+.dropdown-toggle::after {
+    margin-bottom: -2px;
+}
+
+.navbar-brand {
+    padding-left: 0.5rem;
+}
+
 .navbar-brand img {
     height: 1.5rem;
     margin-top: -7px;
@@ -42,9 +69,10 @@ a:focus {
 
 .navbar-brand span {
     font-weight: 900;
-    font-size: 1.2rem;
-    color: #000;
-    margin-left: 3px;
+    font-size: 1.25rem;
+    color: #212529;
+    margin-left: 4px;
+    letter-spacing: 0.25px;
 }
 
 .banner {
@@ -68,10 +96,23 @@ a:focus {
     white-space: nowrap;
 }
 
-.btn:focus {
-    box-shadow: none;
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #00CECE;
+    margin: 40px 0;
 }
 
+/* ---------------------------------------------------
+    BUTTON STYLES
+----------------------------------------------------- */
+/* Remove blue outline around buttons */
+.btn:focus {
+    box-shadow: none;
+    outline: 0;
+}
+
+/* Button: Navigation Links */
 .btn-menu {
     background-color: transparent;
     padding: .375rem .5rem;
@@ -87,6 +128,16 @@ a:focus {
     color: #00A8A8 !important;
 }
 
+.primary-nav-link,
+.primary-nav-link:focus {
+    color: #5a6570;
+}
+
+.primary-nav-link:hover {
+    color: #00A8A8;
+}
+
+/* Button: Outline (Primary Palette) */
 .primary-btn-outline {
     background: transparent;
     color: #00A8A8;
@@ -98,19 +149,23 @@ a:focus {
     color: #fff;
 }
 
-.primary-nav-link {
-    color: #5a6570;
-}
-
-.primary-nav-link:hover {
+/* Button: Icon Outline (Primary Palette) */
+.btn-circle-primary {
+    border: 1.5px solid #00A8A8;
     color: #00A8A8;
+    width: 30px;
+    height: 30px;
+    padding: 5px 0px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.42857;
+    margin-bottom: 0.7rem;
 }
 
-.line {
-    width: 100%;
-    height: 1px;
-    border-bottom: 1px dashed #ddd;
-    margin: 40px 0;
+.btn-circle-primary:hover {
+    background-color: #00A8A8;
+    color: #fff;
 }
 
 /* ---------------------------------------------------
@@ -120,7 +175,7 @@ a:focus {
     width: 250px;
     position: fixed;
     top: 0;
-    left: -250px;
+    right: -250px;
     height: 100vh;
     z-index: 999;
     background: #324047;
@@ -131,7 +186,7 @@ a:focus {
 }
 
 #sidebar.active {
-    left: 0;
+    right: 0;
 }
 
 #dismiss {
@@ -195,12 +250,12 @@ a:focus {
     display: block;
 }
 
-#sidebar ul li a:hover {
+#sidebar ul.components li a:hover {
     color: #00A8A8;
     background: #fff;
 }
 
-#sidebar ul li.active>a {
+#sidebar ul.components li.active>a {
     color: #fff;
     background: #475b65;
 }
@@ -209,7 +264,7 @@ a[data-toggle="collapse"] {
     position: relative;
 }
 
-.dropdown-toggle::after {
+#sidebar .dropdown-toggle::after {
     display: block;
     position: absolute;
     top: 50%;
@@ -239,34 +294,103 @@ ul.CTAs {
 
 ul.CTAs a {
     text-align: center;
-    font-size: 0.9em !important;
     display: block;
     border-radius: 5px;
     margin-bottom: 5px;
 }
 
 a.primary-btn {
+    font-size: 0.9em !important;
     background: #00A8A8;
     color: #fff;
 }
 
 a.primary-btn:hover {
-    background: #fff;
+    background: #007070;
+}
+
+a.primary-btn:active {
+    box-shadow: 0 0 0 0.2rem rgba(0,206,206,.4);
+}
+
+a.primary-btn:focus,
+a.secondary-btn:focus {
+    outline: 0;
+}
+
+a.secondary-btn {
+    font-size: 0.9em !important;
+    background: #fafafa;
     color: #00A8A8;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+a.secondary-btn:hover {
+    background: #007070;
+    color: #fff;
+}
+
+a.secondary-btn:active {
+    box-shadow: 0 0 0 0.2rem rgba(0,206,206,.4);
+}
+
+/* ---------------------------------------------------
+    404 STYLE
+----------------------------------------------------- */
+@media screen and (max-width: 991px) {
+    .img-404 {
+        max-width: 90%;
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .img-404 {
+        height: 70vh;
+        margin-bottom: 2rem;
+    }
 }
 
 /* ---------------------------------------------------
     FOOTER STYLE
 ----------------------------------------------------- */
 footer {
-    line-height: 60px;
+    height: 60px;
+    display: flex;
+    flex-shrink: 0;
     color: #fff;
     background-color: #273238;
-    position: absolute; 
-    left: 0 ; right: 0;
+}
+
+footer .container,
+footer .container .row {
+    height: 100%;
+    width: 100%;
+}
+
+footer .container {
+    display: flex;
+}
+
+footer .container .row {
+    align-items: center;
+}
+
+footer .container .row:first-child {
+    line-height: 15px;
 }
 
 footer a:hover,
 footer a:active {
-    border-bottom: 1px solid #fff;
+    color: #00A8A8;
+}
+
+footer .footer-icons {
+    white-space: nowrap;
+}
+
+footer .footer-icons a {
+    margin-right: 0.25rem;
+    margin-left: 0.25rem;
 }

@@ -3,28 +3,6 @@
     margin-bottom: 2.5rem;
 }
 
-.line {
-    border-bottom: 1px dashed #00CECE;
-}
-
-.btn-circle {
-    border: 1.5px solid #00A8A8;
-    color: #00A8A8;
-    width: 30px;
-    height: 30px;
-    padding: 5px 0px;
-    border-radius: 15px;
-    text-align: center;
-    font-size: 12px;
-    line-height: 1.42857;
-    margin-bottom: 0.7rem;
-}
-
-.btn-circle:hover {
-    background-color: #00A8A8;
-    color: #fff;
-}
-
 .team-subtext {
     text-align: center;
     font-size: 18px;
@@ -40,12 +18,13 @@
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
     background-color: #fff;
     border-radius: 5px;
-    margin-right: 0.5rem;
-    margin-left: 0.5rem;
 }
+
 @media screen and (min-width: 992px) {
     .member-card {
         flex: 1;
+        margin-right: 0.5rem;
+        margin-left: 0.5rem;
     }
 }
 
