@@ -3,7 +3,7 @@
 ----------------------------------------------------- */
 
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
 
 html, body, .wrapper {
     height: 100%;
@@ -25,7 +25,7 @@ body {
 }
 
 p {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.1em;
     font-weight: 400;
     line-height: 1.7em;
@@ -147,6 +147,26 @@ a:focus {
 .primary-btn-outline:hover {
     background: #00A8A8;
     color: #fff;
+}
+
+/* Button: Primary Button (Primary Palette) */
+.primary-btn {
+    background: #00A8A8;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    -webkit-box-shadow: 0px 4px 8px 0px rgba(0,122,122,0.5);
+    -moz-box-shadow: 0px 4px 8px 0px rgba(0,122,122,0.5);
+    box-shadow: 0px 4px 8px 0px rgba(0,122,122,0.5);
+    
+}
+
+.primary-btn:hover {
+    background: #00c7c7;
+}
+
+.primary-btn:active {
+    background: #008989;
 }
 
 /* Button: Icon Outline (Primary Palette) */
@@ -299,26 +319,26 @@ ul.CTAs a {
     margin-bottom: 5px;
 }
 
-a.primary-btn {
+ul.CTAs a.primary-btn {
     font-size: 0.9em !important;
     background: #00A8A8;
     color: #fff;
 }
 
-a.primary-btn:hover {
+ul.CTAs a.primary-btn:hover {
     background: #007070;
 }
 
-a.primary-btn:active {
+ul.CTAs a.primary-btn:active {
     box-shadow: 0 0 0 0.2rem rgba(0,206,206,.4);
 }
 
-a.primary-btn:focus,
-a.secondary-btn:focus {
+ul.CTAs a.primary-btn:focus,
+ul.CTAs a.secondary-btn:focus {
     outline: 0;
 }
 
-a.secondary-btn {
+ul.CTAs a.secondary-btn {
     font-size: 0.9em !important;
     background: #fafafa;
     color: #00A8A8;
@@ -326,12 +346,12 @@ a.secondary-btn {
     letter-spacing: 0.5px;
 }
 
-a.secondary-btn:hover {
+ul.CTAs a.secondary-btn:hover {
     background: #007070;
     color: #fff;
 }
 
-a.secondary-btn:active {
+ul.CTAs a.secondary-btn:active {
     box-shadow: 0 0 0 0.2rem rgba(0,206,206,.4);
 }
 

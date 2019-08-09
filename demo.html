@@ -22,28 +22,30 @@
 
 <body>
     <div class="map-container container-fluid">
-        <button id="btn-back" onclick="goBack()" type="button" class="btn btn-secondary">
+        <button id="btn-back" onclick="goBack()" type="button" class="btn primary-btn">
             <i class="fas fa-arrow-left"></i> <b>Back to website</b></button>
 
-        <div class="alert alert-success alert-dismissible" role="alert">
-            <h4 class="alert-heading">Welcome to SongSAT demo!</h4>
-            <p class="mb-0">Explore the map and click on any of the location markers to hear a
-                sample output!</p>
-
+        <div class="alert alert-dismissible fade show" role="alert">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
+            <h4 class="alert-heading">Welcome to the SongSAT demo!</h4>
+            <p class="mb-0">Explore the map and click on any of the location markers to hear a
+                sample output!</p>
+            <hr>
+            <div class="container-fluid text-center">
+                <button type="button" class="btn primary-btn" data-dismiss="alert" aria-label="Close">
+                    <b>Got it!</b></button>
+            </div>
         </div>
 
         <div id="map"></div>
         <div class="audio-controls">
-            <h6>Controls</h6>
-            <div class="btn-group" role="group">
-                <button id="audio-pause" onclick="pauseAudio();" type="button" class="btn btn-secondary">
-                    <i id="btn-pause" class="fas fa-pause"></i></button>
-                <button id="audio-stop" onclick="stopAudio();" type="button" class="btn btn-secondary">
-                    <i class="fas fa-stop"></i></button>
-            </div>
+            <h6>Audio Controls</h6>
+            <button id="audio-pause" onclick="pauseAudio();" type="button" class="btn primary-btn">
+                <i id="btn-pause" class="fas fa-pause"></i></button>
+            <button id="audio-stop" onclick="stopAudio();" type="button" class="btn primary-btn">
+                <i class="fas fa-stop"></i></button>
         </div>
     </div>
 

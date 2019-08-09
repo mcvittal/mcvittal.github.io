@@ -21,8 +21,8 @@ var baseMaps = {
 var songsatmap = L.map('map', {
     center: [44.0, 0],
     zoom: 3,
-    //maxBounds: L.latLngBounds([-56, -180], [84, 180]),
-    //maxBoundsViscosity: 0.2,
+    maxBounds: L.latLngBounds([-56, -180], [84, 180]),
+    maxBoundsViscosity: 0.2,
     layers: [colourmap, points]
 });
 

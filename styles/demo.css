@@ -3,6 +3,9 @@
     top: 20px;
     right: 20px;
     z-index: 2;
+    margin-left: 1rem;
+    background: rgba(253, 253, 253, 0.95);
+    border: 1px dashed #00A8A8 !important;
 }
 
 .map-container {
@@ -47,11 +50,16 @@
 }
 
 .audio-controls {
+    display: block;
     position: absolute;
     bottom: 0;
     left: 0;
     z-index: 2;
     margin-left: 1rem;
     margin-bottom: 1rem;
-    display: block;
+    padding: 0.75rem;
+    background: rgba(253, 253, 253, 0.85);
+    border: 1px dashed #00A8A8;
+    border-radius: 6px;
+    text-align: center;
 }
