@@ -26,6 +26,10 @@ var songsatmap = L.map('map', {
     layers: [colourmap, points]
 });
 
+// Add a layer control element to the map
+layerControl = L.control.layers({position: 'bottomleft'});
+layerControl.addTo(songsatmap);
+
 $(document).on("click", "#landsatimg", function (feature, layer) {
     document.getElementById('landsatModalLabel').innerHTML = feature.currentTarget.firstChild.attributes.alt.textContent;
     document.getElementById('modal-img').innerHTML = '<img class="img-fluid" src="' + feature.currentTarget.dataset.imgUrl + '">';
