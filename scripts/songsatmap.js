@@ -9,7 +9,7 @@ points.on('click', function (e) { playAudio(e.layer.feature.properties.audiolink
 var colourmap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
     attribution: 'Tiles &copy; Esri &mdash; Source: US National Park Service, <a href="https://github.com/calvinmetcalf/leaflet-ajax" target="_blank">Leaflet Ajax</a>',
     id: 'songsatmap',
-    noWrap: true, maxZoom: 8, minZoom: 2
+    noWrap: true, maxZoom: 8, minZoom: 3
 });
 
 console.log(points.getBounds(), {padding: L.point(20, 20)})
@@ -21,7 +21,7 @@ var baseMaps = {
 var songsatmap = L.map('map', {
     center: [44.0, 0],
     zoom: 3,
-    maxBounds: L.latLngBounds([-56, -180], [84, 180]),
+    maxBounds: L.latLngBounds([-90, -180], [84, 180]),
     maxBoundsViscosity: 0.2,
     layers: [colourmap, points]
 });
