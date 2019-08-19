@@ -29,7 +29,7 @@ p {
     font-size: 1.1em;
     font-weight: 400;
     line-height: 1.7em;
-    color: #999;
+    color: #717e8c;
 }
 
 a,
@@ -375,7 +375,7 @@ ul.CTAs a.secondary-btn:active {
 /* ---------------------------------------------------
     FOOTER STYLE
 ----------------------------------------------------- */
-footer {
+.main-footer {
     height: 60px;
     display: flex;
     flex-shrink: 0;
@@ -383,34 +383,34 @@ footer {
     background-color: #273238;
 }
 
-footer .container,
-footer .container .row {
+.main-footer .container,
+.main-footer .container .row {
     height: 100%;
     width: 100%;
 }
 
-footer .container {
+.main-footer .container {
     display: flex;
 }
 
-footer .container .row {
+.main-footer .container .row {
     align-items: center;
 }
 
-footer .container .row:first-child {
+.main-footer .container .row:first-child {
     line-height: 15px;
 }
 
-footer a:hover,
-footer a:active {
+.main-footer a:hover,
+.main-footer a:active {
     color: #00A8A8;
 }
 
-footer .footer-icons {
+.main-footer .footer-icons {
     white-space: nowrap;
 }
 
-footer .footer-icons a {
+.main-footer .footer-icons a {
     margin-right: 0.25rem;
     margin-left: 0.25rem;
 }
