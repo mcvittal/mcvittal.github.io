@@ -32,6 +32,15 @@ p {
     color: #717e8c;
 }
 
+p a {
+    color: #717e8c;
+}
+
+p a:hover,
+p a:focus {
+    color: #00A8A8;
+}
+
 a,
 a:hover,
 a:focus {
