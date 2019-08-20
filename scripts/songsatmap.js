@@ -12,8 +12,6 @@ var colourmap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/service
     noWrap: true, maxZoom: 8, minZoom: 3
 });
 
-console.log(points.getBounds(), {padding: L.point(20, 20)})
-
 var baseMaps = {
     "Colour": colourmap
 }
@@ -25,10 +23,6 @@ var songsatmap = L.map('map', {
     maxBoundsViscosity: 0.2,
     layers: [colourmap, points]
 });
-
-// Add a layer control element to the map
-layerControl = L.control.layers({position: 'bottomleft'});
-layerControl.addTo(songsatmap);
 
 $(document).on("click", "#landsatimg", function (feature, layer) {
     document.getElementById('landsatModalLabel').innerHTML = feature.currentTarget.firstChild.attributes.alt.textContent;
