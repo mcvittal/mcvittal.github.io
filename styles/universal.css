@@ -190,6 +190,12 @@ a:focus {
     font-size: 12px;
     line-height: 1.42857;
     margin-bottom: 0.7rem;
+    margin-right: 2px;
+    margin-left: 2px;
+}
+
+.btn-circle-primary:focus {
+    color: #00A8A8;
 }
 
 .btn-circle-primary:hover {
