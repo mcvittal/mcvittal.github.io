@@ -16,11 +16,24 @@ audio {
     margin-bottom: 2rem;
 }
 
-#articles .card {
+@media (min-width: 576px) and (max-width: 991px){
+    #articles .card-columns {
+        column-count: 2;
+    }
+}
+
+#articles .card-img-top {
+    width: 30vmin;
+    padding: 1rem 1rem 0 1rem;
+    margin: 0 auto;
+}
+
+#articles .card-columns .card {
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
     background-color: #fff;
     border-radius: 5px;
     border: transparent;
+    margin-top: 4px;
 }
 
 #articles .card-footer {
@@ -36,6 +49,7 @@ audio {
     width: 40%;
     border-bottom: 1px dashed #00A8A8;
     opacity: 0.5;
+    white-space: nowrap;
 }
 
 #articles .card-subtitle:before {
@@ -68,4 +82,8 @@ audio {
 
 .btn-primary:active, .btn-primary:not(:disabled):not(.disabled):active {
     background-color: #008989;
+}
+
+.bg-primary {
+    background-color: #00A8A8 !important;
 }
