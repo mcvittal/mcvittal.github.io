@@ -23,9 +23,9 @@ audio {
 }
 
 #articles .card-img-top {
-    height: 20vmin;
-    width: auto;
+    max-width: 26vmin;
     margin: 0 auto;
+    height: auto;
 }
 
 #articles .card-columns .card {
